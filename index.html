@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="js/index.js">
 </head>
 
 <body>
@@ -34,16 +35,25 @@
         </div>
 
         <div class="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" placeholder="검색어를 입력해주세요">
-            <button type="reset" value="re"></button>
-            <button type="submit">검색</button>
+            <div class="typing_search">
+                <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+                <form action="#">
+                    <input type="text" placeholder="검색어를 입력해주세요">
+                    <button type="reset"><i class="fa-solid fa-xmark" id="x_icon"></i></button>
+                    <button type="submit">검색</button>
+                </form>
+            </div>
 
-            <!-- <div class="recommand">
+            <div class="recommand">
                 <h2>추천 검색어</h2>
-            </div> -->
+                <a href="#">SE846</a>
+                <a href="#">SE846 Pro</a>
+                <a href="#">SE535</a>
+                <a href="#">SE535 Limited Edition</a>
+                <a href="#">SE425</a>
+                <a href="#">SE215 Special Edition</a>
+            </div>
         </div>
-
 
         <div class="sub_menu">
             <a href="#">모든 헤드폰</a>
@@ -68,9 +78,36 @@
         </div>
     </header>
 
-    <div id="slide">
-
+    <div id="container">
+        <div class="slide_wrap">
+            <div class="slide_box">
+                <div class="slide_list clearfix">
+                    <div class="slide_content slide1">
+                        <img src="https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/Interconnected_AONIC40_Black_01_JacobCollier_Original.jpg-7152a32aa9317542990d66df2dd701f1.jpg"
+                            alt="slide1">
+                    </div>
+                    <div class="slide_content slide2">
+                        <img src="https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/MV7_Vocalist_Silver_XLR_Mic_Stand_2_1920x1195.jpg-55e65ebe2dd19bc31d8ccefb0738b3a3.jpg"
+                            alt="slide2">
+                    </div>
+                    <div class="slide_content slide3">
+                        <img src="https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/heroes/MCFE_Pair-4_MXA310-MXW8_1920x1195.jpeg-9a4fa773daacc4efea535cbbf5292546.jpeg"
+                            alt="slide3">
+                    </div>
+                    <div class="slide_content slide4">
+                        <img src="https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/slider/slide_allProducts_3840x2390.jpg-6d4a940e3accad99e4d51f0450f2abe3.jpg"
+                            alt="slide4">
+                    </div>
+                </div>
+            </div>
+            <div class="slide_btn_box">
+                <button type="button" class="prev">Prev</button>
+                <button type="button" class="next">Next</button>
+            </div>
+            <ul class="slide_pagination"></ul>
+        </div>
     </div>
+
 </body>
 
 </html>
