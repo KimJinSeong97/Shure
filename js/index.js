@@ -1,51 +1,55 @@
-const slideList = document.querySelector('.slide_list');
-const slideContents = document.querySelectorAll('.slide_content');
-const slideBtnPrev = document.querySelector('.prev');
-const slideBtnNext = document.querySelector('.next');
-const pagination = document.querySelector('.slide_pagination');
+//nav hover, search click
+const main_menu1 = document.querySelector('.mm1');
+const sub_menu1 = document.querySelector('.sb1');
+const main_menu2 = document.querySelector('.mm2');
+const sub_menu2 = document.querySelector('.sb2');
+const main_menu3 = document.querySelector('.mm3');
+const sub_menu3 = document.querySelector('.sb3');
+const main_menu4 = document.querySelector('.mm4');
+const sub_menu4 = document.querySelector('.sb4');
 
-const slideLen = slideContents.length;
-const slideWidth = 400;
-const slideSpeed = 300;
-const startNum = 0;
-
-slideList.style.width = slideWidth * (slideLen + 2) + "px";
-
-let firstChild = slideList.firstElementChild;
-let lastChild = slideList.lastElementChild;
-let clonedFirst = firstChild.cloneNode(true);
-let clonedLast = lastChild.cloneNode(true);
-
-slideList.appendChild(clonedFirst);
-slideList.insertBefore(clonedLast, slideList.firstElementChild);
-
-slideList.style.transform = "translate3d(-" + (slideWidth * (startNum + 1)) + "px, 0px, 0px)";
-
-let curIndex = startNum;
-let curSlide = slideContents[curIndex];
-curSlide.classList.add('slide_active');
-
-slideBtnNext.addEventListener('click', function () {
-    if (curIndex <= slideLen - 1) {
-        slideList.style.transition = slideSpeed + "ms";
-        slideList.style.transform = "translate3d(-" + (slideWidth * (curIndex + 2)) + "px, 0px, 0px)";
-    }
-    if (curIndex === slideLen - 1) {
-        setTimeout(function () {
-            slideList.style.transition = "0ms";
-            slideList.style.transform = "translate3d(-" + slideWidth + "px, 0px, 0px)";
-        }, slideSpeed);
-        curIndex = -1;
-    }
-    curSlide.classList.remove('slide_active');
-    pageDots[(curIndex === -1) ? slideLen - 1 : curIndex].classList.remove('dot_active');
-    curSlide = slideContents[++curIndex];
-    curSlide.classList.add('slide_active');
-    pageDots[curIndex].classList.add('dot_active');
+main_menu1.addEventListener('mouseover', function () {
+    sub_menu1.style.display = 'flex';
+});
+main_menu2.addEventListener('mouseover', function () {
+    sub_menu2.style.display = 'flex';
+});
+main_menu3.addEventListener('mouseover', function () {
+    sub_menu3.style.display = 'flex';
+});
+main_menu4.addEventListener('mouseover', function () {
+    sub_menu4.style.display = 'flex';
 });
 
-slideBtnPrev.addEventListener('click', function () { if (curIndex >= 0) { slideList.style.transition = slideSpeed + "ms"; slideList.style.transform = "translate3d(-" + (slideWidth * curIndex) + "px, 0px, 0px)"; } if (curIndex === 0) { setTimeout(function () { slideList.style.transition = "0ms"; slideList.style.transform = "translate3d(-" + (slideWidth * slideLen) + "px, 0px, 0px)"; }, slideSpeed); curIndex = slideLen; } curSlide.classList.remove('slide_active'); pageDots[(curIndex === slideLen) ? 0 : curIndex].classList.remove('dot_active'); curSlide = slideContents[--curIndex]; curSlide.classList.add('slide_active'); pageDots[curIndex].classList.add('dot_active'); });
+//slide
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const s_box = document.querySelector('.slide_box');
+var s_width = 100;
+var s_index = document.querySelectorAll('.slide_box > div');
+var i = 0;
 
-let curDot; Array.prototype.forEach.call(pageDots, function (dot, i) { dot.addEventListener('click', function (e) { e.preventDefault(); curDot = document.querySelector('.dot_active'); curDot.classList.remove('dot_active'); curDot = this; this.classList.add('dot_active'); curSlide.classList.remove('slide_active'); curIndex = Number(this.getAttribute('data-index')); curSlide = slideContents[curIndex]; curSlide.classList.add('slide_active'); slideList.style.transition = slideSpeed + "ms"; slideList.style.transform = "translate3d(-" + (slideWidth * (curIndex + 1)) + "px, 0px, 0px)"; }); });
+next.onclick = function () {
+    s_box.style.marginLeft = -s_width * i + 'vw';
+    if (i == s_index.length - 1) {
+        i = 0;
+    } else {
+        i++;
+    };
+};
 
-let pageChild = ''; for (var i = 0; i < slideLen; i++) { pageChild += '<li class="dot'; pageChild += (i === startNum) ? ' dot_active' : ''; pageChild += '" data-index="' + i + '"><a href="#"></a></li>'; } pagination.innerHTML = pageChild; const pageDots = document.querySelectorAll('.dot');
+document.querySelector('.btn1').addEventListener('click', function () {
+    document.querySelector('.slide_box').style.transform = 'translate(0vw)';
+});
+
+document.querySelector('.btn2').addEventListener('click', function () {
+    document.querySelector('.slide_box').style.transform = 'translate(-100vw)';
+});
+
+document.querySelector('.btn3').addEventListener('click', function () {
+    document.querySelector('.slide_box').style.transform = 'translate(-200vw)';
+});
+
+document.querySelector('.btn4').addEventListener('click', function () {
+    document.querySelector('.slide_box').style.transform = 'translate(-300vw)';
+});

@@ -1,5 +1,9 @@
 @charset "Utf-8";
 
+body {
+    overflow-x: hidden;
+}
+
 header {
     width: 100%;
     height: 60px;
@@ -20,19 +24,28 @@ nav {
 
 nav>ul {
     display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
+    align-items: center;
 }
 
 .main_menu {
-    /* border-bottom: 3px solid black; */
+    width: 80px;
+    height: 60px;
+    margin: 0 auto;
     font-size: 18px;
     letter-spacing: -0.025em;
     cursor: pointer;
+    box-sizing: border-box;
+}
+
+.main_menu a {
+    display: block;
+    margin-top: 21px;
+    text-align: center;
 }
 
 .main_menu:hover {
     font-weight: 600;
+    border-bottom: 3px solid #000;
 }
 
 .utility {
@@ -54,7 +67,7 @@ nav>ul {
     display: none;
 }
 
-.typing_search{
+.typing_search {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -78,7 +91,7 @@ nav>ul {
     padding-left: 42.5px;
 }
 
-input::placeholder{
+input::placeholder {
     color: #ccc;
 }
 
@@ -86,12 +99,12 @@ input:focus {
     outline: none;
 }
 
-.search button:nth-of-type(1){
+.search button:nth-of-type(1) {
     border: none;
     background-color: #f7f7f7;
 }
 
-.search #x_icon{
+.search #x_icon {
     font-size: 20px;
     color: #ccc;
     cursor: pointer;
@@ -109,7 +122,7 @@ input:focus {
     cursor: pointer;
 }
 
-.recommand{
+.recommand {
     width: 600px;
     margin: 0 auto;
     display: flex;
@@ -119,20 +132,20 @@ input:focus {
     padding-top: 20px;
 }
 
-.recommand h2{
+.recommand h2 {
     font-size: 17px;
     font-weight: 400;
     margin-right: 20px;
 }
 
-.recommand a{
+.recommand a {
     border: 1px solid #ccc;
     padding: 4px 12px;
     margin: 10px 10px 0 0;
     transition: border-color 0.2s, color 0.2s;
 }
 
-.recommand a:hover{
+.recommand a:hover {
     border-color: #79a3dc;
     color: #4477be;
 }
@@ -148,6 +161,7 @@ input:focus {
     align-items: center;
     text-align: center;
     border-top: 1px solid #ddd;
+    z-index: 1;
     display: none;
 }
 
@@ -161,27 +175,89 @@ input:focus {
     font-weight: 600;
 }
 
-#container{
-    width: 100%;
+.slide_box {
+    width: 400vw;
+    transition: all ease-in-out 0.8s;
+}
+
+.slide {
+    width: 100vw;
     height: 600px;
-}
-
-.slide_wrap{
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 30px;
-}
-
-.slide_box{
-    width: 100%;
-    margin: 0 auto;
-    overflow-x: hidden;
-}
-
-.slide_content{
-    display: table;
     float: left;
-    width: 100%;
-    height: 600px;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide_text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.slide_text .new {
+    width: 40px;
+    height: 20px;
+    background-color: #4477be;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.slide_text h2 {
+    font-size: 46px;
+    font-weight: 300;
+    color: #fff;
+    margin: 10px 0px 20px 0px;
+    font-family: 'GmarketSansLight';
+}
+
+.slide_text p {
+    font-size: 22px;
+    color: #fff;
+}
+
+.slide1 {
+    position: relative;
+    background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/Interconnected_AONIC40_Black_01_JacobCollier_Original.jpg-7152a32aa9317542990d66df2dd701f1.jpg);
+}
+
+.slide2 {
+    position: relative;
+    background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/MV7_Vocalist_Silver_XLR_Mic_Stand_2_1920x1195.jpg-55e65ebe2dd19bc31d8ccefb0738b3a3.jpg);
+}
+
+.slide3 {
+    position: relative;
+    background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/heroes/MCFE_Pair-4_MXA310-MXW8_1920x1195.jpeg-9a4fa773daacc4efea535cbbf5292546.jpeg);
+}
+
+.slide4 {
+    position: relative;
+    background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/slider/slide_allProducts_3840x2390.jpg-6d4a940e3accad99e4d51f0450f2abe3.jpg);
+}
+
+.slide_btn_box {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide_btn_box .prev,
+.slide_btn_box .next {
+    background: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.slide_btn_box button {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50px;
+    margin: 0px 8px 0px 8px;
+    background-color: #fff;
+    cursor: pointer;
 }
