@@ -342,3 +342,131 @@ input:focus {
     font-weight: 400;
     padding-top: 15px;
 }
+
+.banner1 {
+    width: 1200px;
+    height: 875px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.ban1,
+.ban2,
+.ban3 {
+    width: 400px;
+    margin-top: 325px;
+}
+
+.banner1 img {
+    width: 320px;
+    height: 525px;
+    margin-left: 40px;
+}
+
+.banner1 h2 {
+    width: 200px;
+    transform: rotate(270deg);
+    margin-left: -80px;
+    margin-bottom: -110px;
+    color: #4477be;
+    font-family: 'GmarketSansLight';
+    font-size: 14px;
+    text-align: right;
+}
+
+.banner1 h3 {
+    font-family: 'GmarketSansLight';
+    text-align: left;
+    font-size: 16px;
+    margin: 10px 0px 10px 40px;
+}
+
+.banner1 h4 {
+    text-align: left;
+    font-size: 15px;
+    margin-left: 40px;
+    font-weight: 400;
+    color: #5b5b5b;
+}
+
+.banner2 {
+    width: 1200px;
+    height: 1500px;
+    margin: 0 auto;
+    background-color: #ddd;
+}
+
+.ban4,
+.ban5 {
+    margin-top: 200px;
+}
+
+.ban4 {
+    float: left;
+}
+
+.ban4 img {
+    width: 663px;
+    height: 420px;
+    margin-left: 40px;
+}
+
+.ban5 {
+    float: right;
+}
+
+.ban5 img {
+    width: 367px;
+    height: 630px;
+    margin-left: 40px;
+}
+
+.ban6 {
+    float: left;
+    padding-top: 200px;
+}
+
+.ban6 img {
+    width: 367px;
+    height: 630px;
+    margin-left: 40px;
+}
+
+.ban7 {
+    float: right;
+    padding-top: 300px;
+}
+
+.ban7 img {
+    width: 663px;
+    height: 420px;
+    margin-left: 40px;
+}
+
+.banner2 h2 {
+    width: 200px;
+    transform: rotate(270deg);
+    margin-left: -80px;
+    margin-bottom: -110px;
+    color: #4477be;
+    font-family: 'GmarketSansLight';
+    font-size: 14px;
+    text-align: right;
+}
+
+.banner2 h3 {
+    font-family: 'GmarketSansLight';
+    text-align: left;
+    font-size: 16px;
+    margin: 10px 0px 10px 40px;
+}
+
+.banner2 h4 {
+    text-align: left;
+    font-size: 15px;
+    margin-left: 40px;
+    font-weight: 400;
+    color: #5b5b5b;
+}
