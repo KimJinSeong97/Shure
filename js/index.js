@@ -1,26 +1,3 @@
-//nav hover, search click
-// const main_menu1 = document.querySelector('.mm1');
-// const sub_menu1 = document.querySelector('.sb1');
-// const main_menu2 = document.querySelector('.mm2');
-// const sub_menu2 = document.querySelector('.sb2');
-// const main_menu3 = document.querySelector('.mm3');
-// const sub_menu3 = document.querySelector('.sb3');
-// const main_menu4 = document.querySelector('.mm4');
-// const sub_menu4 = document.querySelector('.sb4');
-
-// main_menu1.addEventListener('mouseover', function () {
-//     sub_menu1.style.display = 'flex';
-// });
-// main_menu2.addEventListener('mouseover', function () {
-//     sub_menu2.style.display = 'flex';
-// });
-// main_menu3.addEventListener('mouseover', function () {
-//     sub_menu3.style.display = 'flex';
-// });
-// main_menu4.addEventListener('mouseover', function () {
-//     sub_menu4.style.display = 'flex';
-// });
-
 //slide
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
@@ -55,18 +32,22 @@ document.querySelector('.btn4').addEventListener('click', function () {
 });
 
 // best seller slide
-const prev2 = document.querySelector('.prev2');
-const next2 = document.querySelector('.next2');
-const bs_box = document.querySelector('.bs_box');
-var bs_width = 100;
-var bs_index = document.querySelectorAll('.bs_box > div');
-var j = 0;
-
-next2.onclick = function () {
-    bs_box.style.marginLeft = -bs_width * j + 'vw';
-    if (j == bs_index.length - 1) {
-        j = 0;
-    } else {
-        j++;
-    }
-}
+$(function () {
+    var page = 0;
+    $('.prev2').click(function () {
+        page--;
+        if (page < 0) {
+            page = 0;
+            return;
+        }
+        $('.bs_box').stop().animate({ marginLeft: -400 * page }, 250)
+    })
+    $('.next2').click(function () {
+        page++;
+        if (page > $('.bs_box .bs').length - 3) {
+            page = $('.bs_box .bs').length - 3;
+            return;
+        }
+        $('.bs_box').stop().animate({ marginLeft: -400 * page }, 250)
+    })
+})

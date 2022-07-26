@@ -1,472 +1,487 @@
-@charset "Utf-8";
-
 header {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 #logo {
-    width: 130px;
-    margin-left: 50px;
+  width: 130px;
+  margin-left: 50px;
 }
 
 nav {
-    width: 50%;
+  width: 50%;
 }
 
-nav>ul {
-    display: flex;
-    align-items: center;
+nav > ul {
+  display: flex;
+  align-items: center;
 }
 
 .main_menu {
-    width: 80px;
-    height: 60px;
-    margin: 0 auto;
-    font-size: 18px;
-    letter-spacing: -0.025em;
-    cursor: pointer;
-    box-sizing: border-box;
+  width: 80px;
+  height: 60px;
+  margin: 0 auto;
+  font-size: 18px;
+  letter-spacing: -0.025em;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .main_menu a {
-    display: block;
-    margin-top: 21px;
-    text-align: center;
+  display: block;
+  margin-top: 21px;
+  text-align: center;
 }
 
 .main_menu:hover {
-    font-weight: 600;
-    border-bottom: 3px solid #000;
+  font-weight: 600;
+  border-bottom: 3px solid #000;
 }
 
 .utility {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .utility i {
-    margin-right: 50px;
-    color: #4477be;
-    cursor: pointer;
+  margin-right: 50px;
+  color: #4477be;
+  cursor: pointer;
 }
 
 .search {
-    width: 100%;
-    height: 340px;
-    background-color: #f7f7f7;
-    position: fixed;
-    top: 60px;
-    display: none;
+  width: 100%;
+  height: 340px;
+  background-color: #f7f7f7;
+  position: fixed;
+  top: 60px;
+  display: none;
 }
 
 .typing_search {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px;
 }
 
 .search #search_icon {
-    font-size: 20px;
-    position: absolute;
-    left: 29.6%;
+  font-size: 20px;
+  position: absolute;
+  left: 29.6%;
 }
 
 .search input {
-    width: 550px;
-    height: 55px;
-    background-color: #f7f7f7;
-    border: none;
-    border-bottom: 2px solid #4477be;
-    font-size: 17px;
-    padding-left: 42.5px;
+  width: 550px;
+  height: 55px;
+  background-color: #f7f7f7;
+  border: none;
+  border-bottom: 2px solid #4477be;
+  font-size: 17px;
+  padding-left: 42.5px;
+}
+
+input::-moz-placeholder {
+  color: #ccc;
+}
+
+input:-ms-input-placeholder {
+  color: #ccc;
 }
 
 input::placeholder {
-    color: #ccc;
+  color: #ccc;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 .search button:nth-of-type(1) {
-    border: none;
-    background-color: #f7f7f7;
+  border: none;
+  background-color: #f7f7f7;
 }
 
 .search #x_icon {
-    font-size: 20px;
-    color: #ccc;
-    cursor: pointer;
-    position: absolute;
-    top: 108px;
-    right: 40.5%;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  position: absolute;
+  top: 108px;
+  right: 40.5%;
 }
 
 .search button:nth-of-type(2) {
-    width: 180px;
-    height: 55px;
-    background-color: #000;
-    color: #fff;
-    font-size: 17px;
-    cursor: pointer;
+  width: 180px;
+  height: 55px;
+  background-color: #000;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
 }
 
 .recommand {
-    width: 600px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    flex-wrap: wrap;
-    padding-top: 20px;
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 .recommand h2 {
-    font-size: 17px;
-    font-weight: 400;
-    margin-right: 20px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-right: 20px;
 }
 
 .recommand a {
-    border: 1px solid #ccc;
-    padding: 4px 12px;
-    margin: 10px 10px 0 0;
-    transition: border-color 0.2s, color 0.2s;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  margin: 10px 10px 0 0;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .recommand a:hover {
-    border-color: #79a3dc;
-    color: #4477be;
+  border-color: #79a3dc;
+  color: #4477be;
 }
 
 .sub_menu {
-    width: 100%;
-    height: 50px;
-    background-color: #f7f7f7;
-    position: absolute;
-    top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    z-index: 1;
-    display: none;
+  width: 100%;
+  height: 50px;
+  background-color: #f7f7f7;
+  position: absolute;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  z-index: 1;
+  display: none;
 }
 
 .sub_menu a {
-    margin: 0 20px 0 20px;
-    letter-spacing: -0.025em;
-    cursor: pointer;
+  margin: 0 20px 0 20px;
+  letter-spacing: -0.025em;
+  cursor: pointer;
 }
 
 .sub_menu a:hover {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .slide_box {
-    width: 400vw;
-    height: 600px;
-    transition: all ease-in-out 0.8s;
+  width: 400vw;
+  height: 600px;
+  transition: all ease-in-out 0.8s;
 }
 
 .slide {
-    width: 100vw;
-    height: 600px;
-    float: left;
-    background-position: center;
-    background-size: cover;
+  width: 100vw;
+  height: 600px;
+  float: left;
+  background-position: center;
+  background-size: cover;
 }
 
 .slide_text {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
 }
 
 .slide_text .new {
-    width: 40px;
-    height: 20px;
-    background-color: #4477be;
-    color: #fff;
-    font-size: 13px;
-    text-align: center;
+  width: 40px;
+  height: 20px;
+  background-color: #4477be;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
 }
 
 .slide_text h2 {
-    font-size: 46px;
-    font-weight: 300;
-    color: #fff;
-    margin: 10px 0px 20px 0px;
-    font-family: 'GmarketSansLight';
+  font-size: 46px;
+  font-weight: 300;
+  color: #fff;
+  margin: 10px 0px 20px 0px;
+  font-family: "GmarketSansLight";
 }
 
 .slide_text p {
-    font-size: 22px;
-    color: #fff;
+  font-size: 22px;
+  color: #fff;
 }
 
 .slide1 {
-    position: relative;
-    background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/Interconnected_AONIC40_Black_01_JacobCollier_Original.jpg-7152a32aa9317542990d66df2dd701f1.jpg);
+  position: relative;
+  background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/Interconnected_AONIC40_Black_01_JacobCollier_Original.jpg-7152a32aa9317542990d66df2dd701f1.jpg);
 }
 
 .slide2 {
-    position: relative;
-    background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/MV7_Vocalist_Silver_XLR_Mic_Stand_2_1920x1195.jpg-55e65ebe2dd19bc31d8ccefb0738b3a3.jpg);
+  position: relative;
+  background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/MV7_Vocalist_Silver_XLR_Mic_Stand_2_1920x1195.jpg-55e65ebe2dd19bc31d8ccefb0738b3a3.jpg);
 }
 
 .slide3 {
-    position: relative;
-    background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/heroes/MCFE_Pair-4_MXA310-MXW8_1920x1195.jpeg-9a4fa773daacc4efea535cbbf5292546.jpeg);
+  position: relative;
+  background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/heroes/MCFE_Pair-4_MXA310-MXW8_1920x1195.jpeg-9a4fa773daacc4efea535cbbf5292546.jpeg);
 }
 
 .slide4 {
-    position: relative;
-    background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/slider/slide_allProducts_3840x2390.jpg-6d4a940e3accad99e4d51f0450f2abe3.jpg);
+  position: relative;
+  background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/slider/slide_allProducts_3840x2390.jpg-6d4a940e3accad99e4d51f0450f2abe3.jpg);
 }
 
 .slide_btn_box {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .slide_btn_box .prev,
 .slide_btn_box .next {
-    background: none;
-    font-size: 20px;
-    font-weight: 600;
-    color: #fff;
+  background: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
 }
 
 .slide_btn_box button {
-    width: 10px;
-    height: 10px;
-    border: none;
-    border-radius: 50px;
-    margin: 0px 8px 0px 8px;
-    background-color: #fff;
-    cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50px;
+  margin: 0px 8px 0px 8px;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 .best_seller {
-    width: 100vw;
-    height: 840px;
+  width: 100%;
+  height: 840px;
 }
 
 .bg_video {
-    width: 100vw;
-    height: 460px;
-    background-color: #79a3dc;
+  width: 100%;
+  height: 460px;
+  background-color: #79a3dc;
 }
 
 .bg_video h2 {
-    color: #fff;
-    font-size: 42px;
-    font-family: 'GmarketSansLight';
-    text-align: center;
-    padding-top: 90px;
+  color: #fff;
+  font-size: 42px;
+  font-family: "GmarketSansLight";
+  text-align: center;
+  padding-top: 90px;
 }
 
 .prev2 {
-    position: absolute;
-    top: 110%;
-    left: 15%;
-    font-size: 40px;
-    cursor: pointer;
-    color: #ccc;
+  position: absolute;
+  top: 110%;
+  left: 15%;
+  font-size: 40px;
+  cursor: pointer;
+  color: #ccc;
 }
 
 .next2 {
-    position: absolute;
-    top: 110%;
-    right: 15%;
-    font-size: 40px;
-    cursor: pointer;
-    color: #ccc;
+  position: absolute;
+  top: 110%;
+  right: 15%;
+  font-size: 40px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.bs_wrap {
+  width: 1200px;
+  height: 645px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .bs_box {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 75px;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 75px;
 }
 
 .bs {
-    width: 400px;
-    float: left;
-    text-align: center;
+  width: 400px;
+  float: left;
+  text-align: center;
 }
 
 .bs img {
-    width: 400px;
+  width: 400px;
 }
 
 .bs h3 {
-    color: #4477be;
-    font-family: 'GmarketSansLight';
-    font-size: 15px;
+  color: #4477be;
+  font-family: "GmarketSansLight";
+  font-size: 15px;
 }
 
 .bs h4 {
-    padding: 20px 0px 20px 0px;
-    color: #2b2b2b;
-    font-size: 19px;
-    font-weight: 400;
+  padding: 20px 0px 20px 0px;
+  color: #2b2b2b;
+  font-size: 19px;
+  font-weight: 400;
 }
 
 .bs i {
-    color: #5b5b5b;
+  color: #5b5b5b;
 }
 
 .bs p {
-    color: #5b5b5b;
-    font-size: 14px;
+  color: #5b5b5b;
+  font-size: 14px;
 }
 
 .bs h5 {
-    color: #5b5b5b;
-    font-size: 13px;
-    font-weight: 400;
-    padding-top: 15px;
+  color: #5b5b5b;
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 15px;
 }
 
 .banner1 {
-    width: 1200px;
-    height: 875px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+  width: 1200px;
+  height: 875px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 .ban1,
 .ban2,
 .ban3 {
-    width: 400px;
-    margin-top: 325px;
+  width: 400px;
+  margin-top: 325px;
 }
 
 .banner1 img {
-    width: 320px;
-    height: 525px;
-    margin-left: 40px;
+  width: 320px;
+  height: 525px;
+  margin-left: 40px;
 }
 
 .banner1 h2 {
-    width: 200px;
-    transform: rotate(270deg);
-    margin-left: -80px;
-    margin-bottom: -110px;
-    color: #4477be;
-    font-family: 'GmarketSansLight';
-    font-size: 14px;
-    text-align: right;
+  width: 200px;
+  transform: rotate(270deg);
+  margin-left: -80px;
+  margin-bottom: -110px;
+  color: #4477be;
+  font-family: "GmarketSansLight";
+  font-size: 14px;
+  text-align: right;
 }
 
 .banner1 h3 {
-    font-family: 'GmarketSansLight';
-    text-align: left;
-    font-size: 16px;
-    margin: 10px 0px 10px 40px;
+  font-family: "GmarketSansLight";
+  text-align: left;
+  font-size: 16px;
+  margin: 10px 0px 10px 40px;
 }
 
 .banner1 h4 {
-    text-align: left;
-    font-size: 15px;
-    margin-left: 40px;
-    font-weight: 400;
-    color: #5b5b5b;
+  text-align: left;
+  font-size: 15px;
+  margin-left: 40px;
+  font-weight: 400;
+  color: #5b5b5b;
 }
 
 .banner2 {
-    width: 1200px;
-    height: 1500px;
-    margin: 0 auto;
-    background-color: #ddd;
+  width: 1200px;
+  height: 1600px;
+  margin: 0 auto;
+  background-color: #ccc;
 }
 
 .ban4,
 .ban5 {
-    margin-top: 200px;
+  margin-top: 200px;
 }
 
 .ban4 {
-    float: left;
+  float: left;
 }
 
 .ban4 img {
-    width: 663px;
-    height: 420px;
-    margin-left: 40px;
+  width: 663px;
+  height: 420px;
+  margin-left: 40px;
 }
 
 .ban5 {
-    float: right;
+  float: right;
+  padding-right: 40px;
 }
 
 .ban5 img {
-    width: 367px;
-    height: 630px;
-    margin-left: 40px;
+  width: 367px;
+  height: 630px;
+  margin-left: 40px;
 }
 
 .ban6 {
-    float: left;
-    padding-top: 200px;
+  float: left;
+  padding-top: 200px;
 }
 
 .ban6 img {
-    width: 367px;
-    height: 630px;
-    margin-left: 40px;
+  width: 367px;
+  height: 630px;
+  margin-left: 40px;
 }
 
 .ban7 {
-    float: right;
-    padding-top: 300px;
+  float: right;
+  padding-top: 300px;
+  padding-right: 40px;
 }
 
 .ban7 img {
-    width: 663px;
-    height: 420px;
-    margin-left: 40px;
+  width: 663px;
+  height: 420px;
+  margin-left: 40px;
 }
 
 .banner2 h2 {
-    width: 200px;
-    transform: rotate(270deg);
-    margin-left: -80px;
-    margin-bottom: -110px;
-    color: #4477be;
-    font-family: 'GmarketSansLight';
-    font-size: 14px;
-    text-align: right;
+  width: 200px;
+  transform: rotate(270deg);
+  margin-left: -80px;
+  margin-bottom: -110px;
+  color: #4477be;
+  font-family: "GmarketSansLight";
+  font-size: 14px;
+  text-align: right;
 }
 
 .banner2 h3 {
-    font-family: 'GmarketSansLight';
-    text-align: left;
-    font-size: 16px;
-    margin: 10px 0px 10px 40px;
+  font-family: "GmarketSansLight";
+  text-align: left;
+  font-size: 16px;
+  margin: 10px 0px 10px 40px;
 }
 
 .banner2 h4 {
-    text-align: left;
-    font-size: 15px;
-    margin-left: 40px;
-    font-weight: 400;
-    color: #5b5b5b;
+  text-align: left;
+  font-size: 15px;
+  margin-left: 40px;
+  font-weight: 400;
+  color: #5b5b5b;
 }
