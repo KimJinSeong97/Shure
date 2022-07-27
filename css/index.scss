@@ -39,7 +39,7 @@ nav>ul {
     text-align: center;
 }
 
-.main_menu:hover {
+.mm_font {
     font-weight: 600;
     border-bottom: 3px solid #000;
 }
@@ -51,17 +51,21 @@ nav>ul {
 
 .utility i {
     margin-right: 20px;
-    color: #4477be;
+    color: #79a3dc;
     cursor: pointer;
+}
+
+.utility i:hover {
+    color: #4477be;
 }
 
 .search {
     width: 100%;
     height: 340px;
     background-color: #f7f7f7;
-    position: fixed;
+    position: absolute;
     top: 60px;
-    z-index: 2;
+    z-index: 3;
     border-top: 1px solid #ddd;
     display: none;
 }
@@ -174,14 +178,11 @@ input:focus {
     font-weight: 600;
 }
 
-#dark {
-    width: 100%;
-    height: 4226px;
-    position: absolute;
-}
-
 .dark_mode {
+    width: 100%;
+    height: 4167px;
     background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
     z-index: 1;
     transition: all 0.25s;
 }
@@ -283,10 +284,17 @@ input:focus {
 .bg_video {
     width: 100%;
     height: 460px;
-    background-color: #79a3dc;
+    position: absolute;
+    z-index: -1;
+
+    video {
+        width: 100%;
+        height: 460px;
+        object-fit: cover;
+    }
 }
 
-.bg_video h2 {
+.best_seller h2 {
     color: #fff;
     font-size: 42px;
     font-family: 'GmarketSansLight';
@@ -314,23 +322,20 @@ input:focus {
 
 .bs_wrap {
     width: 1200px;
-    height: 645px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .bs_box {
-    width: 1200px;
-    margin: 0 auto;
+    width: 2400px;
     display: flex;
     justify-content: flex-start;
     padding-top: 75px;
-    transition: all ease-in-out 0.25s;
+    transition: all 0.25s;
 }
 
 .bs {
     width: 400px;
-    float: left;
     text-align: center;
 }
 
