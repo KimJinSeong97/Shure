@@ -42,7 +42,7 @@ document.querySelector('header').addEventListener('mouseleave', function () {
     document.querySelector('#dark').classList.remove('dark_mode');
 })
 
-//검색 버튼 클릭창
+//검색 아이콘 클릭 -> 창 오픈
 $(function () {
     $('#search_button').on('click', function () {
         $('.search').slideToggle(250);
@@ -53,66 +53,61 @@ $(function () {
     });
 })
 
-//slide
+//slide button event
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 const sbox = document.querySelector('.slide_box');
-var i = 0;
-
-next.onclick = function () {
-    sbox.style.marginLeft = -100 * i + 'vw';
-    if (i == document.querySelectorAll('.slide_box > div').length - 1) {
-        i = 0;
-    } else {
-        i++;
-    }
-}
-
-next.onclick = function () {
-    i++;
-    if (i > document.querySelectorAll('.slide_box>div').length - 1) {
-        i = document.querySelectorAll('.slide_box>div').length - 1;
-        return;
-    }
-    sbox.style.marginLeft = -100 * i + 'vw';
-}
-
-document.querySelector('.btn1').addEventListener('click', function () {
-    document.querySelector('.slide_box').style.transform = 'translate(0vw)';
-});
-
-document.querySelector('.btn2').addEventListener('click', function () {
-    document.querySelector('.slide_box').style.transform = 'translate(-100vw)';
-});
-
-document.querySelector('.btn3').addEventListener('click', function () {
-    document.querySelector('.slide_box').style.transform = 'translate(-200vw)';
-});
-
-document.querySelector('.btn4').addEventListener('click', function () {
-    document.querySelector('.slide_box').style.transform = 'translate(-300vw)';
-});
-
-// best seller slide
-const prev2 = document.querySelector('.prev2');
-const next2 = document.querySelector('.next2');
-const bsbox = document.querySelector('.bs_box');
 var page = 0;
 
-prev2.onclick = function () {
+prev.onclick = function () {
     page--;
     if (page < 0) {
         page = 0;
         return;
     }
-    bsbox.style.marginLeft = -400 * page + 'px';
+    sbox.style.marginLeft = -100 * page + 'vw';
 };
 
-next2.onclick = function () {
+next.onclick = function () {
     page++;
-    if (page > document.querySelectorAll('.bs').length - 3) {
-        page = document.querySelectorAll('.bs').length - 3;
+    if (page > document.querySelectorAll('.slide').length - 1) {
+        page = document.querySelectorAll('.slide').length - 1
         return;
     }
-    bsbox.style.marginLeft = `${-400 * page}px`;
+    sbox.style.marginLeft = -100 * page + 'vw';
 };
+
+$(function () {
+    var dot = $('.dot');
+    $(dot).click(function () {
+        index = $(this).index();
+        page = index;
+        $(sbox).stop().css({ marginLeft: -100 * index + "vw" });
+    })
+})
+
+// best seller slide
+$(function () {
+    var page = 0;
+    const prev2 = document.querySelector('.prev2');
+    const next2 = document.querySelector('.next2');
+    const bsbox = document.querySelector('.bs_box');
+
+    prev2.onclick = function () {
+        page--;
+        if (page < 0) {
+            page = 0;
+            return;
+        }
+        bsbox.style.marginLeft = -400 * page + 'px';
+    };
+
+    next2.onclick = function () {
+        page++;
+        if (page > document.querySelectorAll('.bs').length - 3) {
+            page = document.querySelectorAll('.bs').length - 3;
+            return;
+        }
+        bsbox.style.marginLeft = `${-400 * page}px`;
+    };
+})

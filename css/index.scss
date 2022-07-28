@@ -1,12 +1,14 @@
 @charset "Utf-8";
 
+@import "reset";
+
 //addclass
 .dark_mode {
     width: 100%;
     height: 4167px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     transition: all 0.25s;
 }
 
@@ -47,9 +49,8 @@ header {
                 text-align: center;
             }
 
-            a:hover::after {
-                width: 100%;
-                left: 0;
+            a:hover {
+                font-weight: 600;
             }
 
             a::after {
@@ -62,6 +63,11 @@ header {
                 left: 50%;
                 bottom: -15px;
                 transition: all .3s;
+            }
+
+            a:hover::after {
+                width: 100%;
+                left: 0;
             }
         }
     }
@@ -87,7 +93,7 @@ header {
         background-color: #f7f7f7;
         position: absolute;
         top: 60px;
-        z-index: 3;
+        z-index: 4;
         border-top: 1px solid #ddd;
         display: none;
 
@@ -186,7 +192,7 @@ header {
         align-items: center;
         text-align: center;
         border-top: 1px solid #ddd;
-        z-index: 2;
+        z-index: 4;
         display: none;
 
         a {
@@ -263,7 +269,6 @@ header {
         position: relative;
         background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/slider/slide_allProducts_3840x2390.jpg-6d4a940e3accad99e4d51f0450f2abe3.jpg);
     }
-
 }
 
 .slide_btn_box {
@@ -271,23 +276,48 @@ header {
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    .prev,
-    .next {
-        background: none;
-        font-size: 20px;
-        font-weight: 600;
-        color: #fff;
-    }
+    z-index: 2;
 
     button {
-        width: 10px;
-        height: 10px;
+        position: relative;
+        width: 13px;
+        height: 13px;
         border: none;
         border-radius: 50px;
         margin: 0px 8px 0px 8px;
         background-color: #fff;
         cursor: pointer;
+        z-index: 2;
+        transition: all 0.25s;
+    }
+
+    button:hover {
+        background-color: #4477be;
+    }
+}
+
+.prev_next {
+    width: 170px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+
+    .prev,
+    .next {
+        font-size: 30px;
+        font-weight: 600;
+        color: #fff;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: #4477be;
     }
 }
 
@@ -577,3 +607,4 @@ footer {
         }
     }
 }
+

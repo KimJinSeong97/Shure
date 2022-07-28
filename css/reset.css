@@ -1,32 +1,29 @@
-@charset "Utf-8";
-
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arita-dotum-Medium';
+  margin: 0;
+  padding: 0;
+  font-family: "Arita-dotum-Medium";
 }
 
 ul,
 ol,
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
 @font-face {
-    font-family: 'Arita-dotum-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Arita-dotum-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
 @font-face {
-    font-family: 'GmarketSansLight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }

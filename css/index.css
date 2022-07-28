@@ -1,9 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arita-dotum-Medium";
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Arita-dotum-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .dark_mode {
   width: 100%;
   height: 4167px;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   transition: all 0.25s;
 }
 
@@ -41,9 +70,8 @@ header nav .main_menu a {
   padding-bottom: 16px;
   text-align: center;
 }
-header nav .main_menu a:hover::after {
-  width: 100%;
-  left: 0;
+header nav .main_menu a:hover {
+  font-weight: 600;
 }
 header nav .main_menu a::after {
   content: "";
@@ -55,6 +83,10 @@ header nav .main_menu a::after {
   left: 50%;
   bottom: -15px;
   transition: all 0.3s;
+}
+header nav .main_menu a:hover::after {
+  width: 100%;
+  left: 0;
 }
 header .utility {
   font-size: 20px;
@@ -74,7 +106,7 @@ header .search {
   background-color: #f7f7f7;
   position: absolute;
   top: 60px;
-  z-index: 3;
+  z-index: 4;
   border-top: 1px solid #ddd;
   display: none;
 }
@@ -166,7 +198,7 @@ header .sub_menu {
   align-items: center;
   text-align: center;
   border-top: 1px solid #ddd;
-  z-index: 2;
+  z-index: 4;
   display: none;
 }
 header .sub_menu a {
@@ -238,22 +270,45 @@ header .sub_menu a:hover {
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.slide_btn_box .prev,
-.slide_btn_box .next {
-  background: none;
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
+  z-index: 2;
 }
 .slide_btn_box button {
-  width: 10px;
-  height: 10px;
+  position: relative;
+  width: 13px;
+  height: 13px;
   border: none;
   border-radius: 50px;
   margin: 0px 8px 0px 8px;
   background-color: #fff;
   cursor: pointer;
+  z-index: 2;
+  transition: all 0.25s;
+}
+.slide_btn_box button:hover {
+  background-color: #4477be;
+}
+
+.prev_next {
+  width: 170px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  z-index: 1;
+  justify-content: space-between;
+}
+.prev_next .prev,
+.prev_next .next {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.prev_next button:hover {
+  color: #4477be;
 }
 
 .best_seller {
