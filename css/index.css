@@ -1,3 +1,12 @@
+.dark_mode {
+  width: 100%;
+  height: 4167px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  transition: all 0.25s;
+}
+
 header {
   width: 100%;
   height: 60px;
@@ -6,22 +15,18 @@ header {
   align-items: center;
   position: relative;
 }
-
-#logo {
+header #logo {
   width: 130px;
   margin-left: 50px;
 }
-
-nav {
+header nav {
   width: 50%;
 }
-
-nav > ul {
+header nav ul {
   display: flex;
   align-items: center;
 }
-
-.main_menu {
+header nav .main_menu {
   width: 80px;
   height: 60px;
   margin: 0 auto;
@@ -30,34 +35,40 @@ nav > ul {
   cursor: pointer;
   box-sizing: border-box;
 }
-
-.main_menu a {
+header nav .main_menu a {
   display: block;
-  margin-top: 21px;
+  padding-top: 21px;
+  padding-bottom: 16px;
   text-align: center;
 }
-
-.mm_font {
-  font-weight: 600;
-  border-bottom: 3px solid #000;
+header nav .main_menu a:hover::after {
+  width: 100%;
+  left: 0;
 }
-
-.utility {
+header nav .main_menu a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #000;
+  display: block;
+  position: relative;
+  left: 50%;
+  bottom: -15px;
+  transition: all 0.3s;
+}
+header .utility {
   font-size: 20px;
   margin-right: 45px;
 }
-
-.utility i {
+header .utility i {
   margin-right: 20px;
   color: #79a3dc;
   cursor: pointer;
 }
-
-.utility i:hover {
+header .utility i:hover {
   color: #4477be;
 }
-
-.search {
+header .search {
   width: 100%;
   height: 340px;
   background-color: #f7f7f7;
@@ -67,22 +78,19 @@ nav > ul {
   border-top: 1px solid #ddd;
   display: none;
 }
-
-.typing_search {
+header .search .typing_search {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 90px;
 }
-
-.search #search_icon {
+header .search #search_icon {
   font-size: 20px;
   position: absolute;
   left: 29.6%;
 }
-
-.search input {
+header .search input {
   width: 550px;
   height: 55px;
   background-color: #f7f7f7;
@@ -91,29 +99,23 @@ nav > ul {
   font-size: 17px;
   padding-left: 42.5px;
 }
-
-input::-moz-placeholder {
+header .search input::-moz-placeholder {
   color: #ccc;
 }
-
-input:-ms-input-placeholder {
+header .search input:-ms-input-placeholder {
   color: #ccc;
 }
-
-input::placeholder {
+header .search input::placeholder {
   color: #ccc;
 }
-
-input:focus {
+header .search input:focus {
   outline: none;
 }
-
-.search button:nth-of-type(1) {
+header .search button:nth-of-type(1) {
   border: none;
   background-color: #f7f7f7;
 }
-
-.search #x_icon {
+header .search #x_icon {
   font-size: 20px;
   color: #ccc;
   cursor: pointer;
@@ -121,8 +123,7 @@ input:focus {
   top: 108px;
   right: 40.5%;
 }
-
-.search button:nth-of-type(2) {
+header .search button:nth-of-type(2) {
   width: 180px;
   height: 55px;
   background-color: #000;
@@ -130,8 +131,7 @@ input:focus {
   font-size: 17px;
   cursor: pointer;
 }
-
-.recommand {
+header .recommand {
   width: 600px;
   margin: 0 auto;
   display: flex;
@@ -140,26 +140,22 @@ input:focus {
   flex-wrap: wrap;
   padding-top: 20px;
 }
-
-.recommand h2 {
+header .recommand h2 {
   font-size: 17px;
   font-weight: 400;
   margin-right: 20px;
 }
-
-.recommand a {
+header .recommand a {
   border: 1px solid #ccc;
   padding: 4px 12px;
   margin: 10px 10px 0 0;
   transition: border-color 0.2s, color 0.2s;
 }
-
-.recommand a:hover {
+header .recommand a:hover {
   border-color: #79a3dc;
   color: #4477be;
 }
-
-.sub_menu {
+header .sub_menu {
   width: 100%;
   height: 50px;
   background-color: #f7f7f7;
@@ -173,24 +169,13 @@ input:focus {
   z-index: 2;
   display: none;
 }
-
-.sub_menu a {
+header .sub_menu a {
   margin: 0 20px 0 20px;
   letter-spacing: -0.025em;
   cursor: pointer;
 }
-
-.sub_menu a:hover {
+header .sub_menu a:hover {
   font-weight: 600;
-}
-
-.dark_mode {
-  width: 100%;
-  height: 4167px;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  z-index: 1;
-  transition: all 0.25s;
 }
 
 .slide_box {
@@ -198,8 +183,7 @@ input:focus {
   height: 600px;
   transition: all ease-in-out 0.75s;
 }
-
-.slide {
+.slide_box .slide {
   width: 100vw;
   height: 600px;
   float: left;
@@ -207,15 +191,13 @@ input:focus {
   background-size: cover;
   border-top: 1px solid #ddd;
 }
-
-.slide_text {
+.slide_box .slide .slide_text {
   position: absolute;
   top: 50%;
   left: 35%;
   transform: translate(-50%, -50%);
 }
-
-.slide_text .new {
+.slide_box .slide .slide_text .new {
   width: 40px;
   height: 20px;
   background-color: #4477be;
@@ -223,36 +205,30 @@ input:focus {
   font-size: 13px;
   text-align: center;
 }
-
-.slide_text h2 {
+.slide_box .slide .slide_text h2 {
   font-size: 46px;
   font-weight: 300;
   color: #fff;
   margin: 10px 0px 20px 0px;
   font-family: "GmarketSansLight";
 }
-
-.slide_text p {
+.slide_box .slide .slide_text p {
   font-size: 22px;
   color: #fff;
 }
-
-.slide1 {
+.slide_box .slide1 {
   position: relative;
   background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/Interconnected_AONIC40_Black_01_JacobCollier_Original.jpg-7152a32aa9317542990d66df2dd701f1.jpg);
 }
-
-.slide2 {
+.slide_box .slide2 {
   position: relative;
   background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/home-page/MV7_Vocalist_Silver_XLR_Mic_Stand_2_1920x1195.jpg-55e65ebe2dd19bc31d8ccefb0738b3a3.jpg);
 }
-
-.slide3 {
+.slide_box .slide3 {
   position: relative;
   background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/heroes/MCFE_Pair-4_MXA310-MXW8_1920x1195.jpeg-9a4fa773daacc4efea535cbbf5292546.jpeg);
 }
-
-.slide4 {
+.slide_box .slide4 {
   position: relative;
   background-image: url(https://assets-cdn.shureweb.eu/damfiles/portal_slider/global/hp/slider/slide_allProducts_3840x2390.jpg-6d4a940e3accad99e4d51f0450f2abe3.jpg);
 }
@@ -263,7 +239,6 @@ input:focus {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .slide_btn_box .prev,
 .slide_btn_box .next {
   background: none;
@@ -271,7 +246,6 @@ input:focus {
   font-weight: 600;
   color: #fff;
 }
-
 .slide_btn_box button {
   width: 10px;
   height: 10px;
@@ -286,92 +260,77 @@ input:focus {
   width: 100%;
   height: 840px;
 }
-
-.bg_video {
+.best_seller .bs_back {
   width: 100%;
   height: 460px;
   position: absolute;
   z-index: -1;
 }
-.bg_video video {
+.best_seller .bs_back img {
   width: 100%;
   height: 460px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .best_seller h2 {
-  color: #fff;
   font-size: 42px;
   font-family: "GmarketSansLight";
   text-align: center;
   padding-top: 90px;
 }
-
-.prev2 {
+.best_seller .prev2 {
   position: absolute;
-  top: 110%;
+  top: 116%;
   left: 15%;
-  font-size: 40px;
+  font-size: 60px;
   cursor: pointer;
-  color: #ccc;
 }
-
-.next2 {
+.best_seller .next2 {
   position: absolute;
-  top: 110%;
+  top: 116%;
   right: 15%;
-  font-size: 40px;
+  font-size: 60px;
   cursor: pointer;
-  color: #ccc;
 }
-
-.bs_wrap {
+.best_seller .bs_wrap {
   width: 1200px;
   margin: 0 auto;
   overflow: hidden;
 }
-
-.bs_box {
+.best_seller .bs_wrap .bs_box {
   width: 2400px;
   display: flex;
   justify-content: flex-start;
   padding-top: 75px;
   transition: all 0.25s;
 }
-
-.bs {
+.best_seller .bs_wrap .bs_box .bs {
   width: 400px;
   text-align: center;
+  cursor: pointer;
 }
-
-.bs img {
+.best_seller .bs_wrap .bs_box .bs img {
   width: 400px;
 }
-
-.bs h3 {
+.best_seller .bs_wrap .bs_box .bs h3 {
   color: #4477be;
   font-family: "GmarketSansLight";
   font-size: 15px;
 }
-
-.bs h4 {
+.best_seller .bs_wrap .bs_box .bs h4 {
   padding: 20px 0px 20px 0px;
   color: #2b2b2b;
   font-size: 19px;
   font-weight: 400;
 }
-
-.bs i {
+.best_seller .bs_wrap .bs_box .bs i {
   color: #5b5b5b;
 }
-
-.bs p {
+.best_seller .bs_wrap .bs_box .bs p {
   color: #5b5b5b;
   font-size: 14px;
 }
-
-.bs h5 {
+.best_seller .bs_wrap .bs_box .bs h5 {
   color: #5b5b5b;
   font-size: 13px;
   font-weight: 400;
@@ -386,21 +345,15 @@ input:focus {
   justify-content: space-between;
   position: relative;
 }
-
-.ban1,
-.ban2,
-.ban3 {
+.banner1 .ban1,
+.banner1 .ban2,
+.banner1 .ban3 {
   width: 400px;
   margin-top: 325px;
 }
-
-.banner1 img {
-  width: 320px;
-  height: 525px;
-  margin-left: 40px;
-}
-
-.banner1 h2 {
+.banner1 .ban1 h2,
+.banner1 .ban2 h2,
+.banner1 .ban3 h2 {
   width: 200px;
   transform: rotate(270deg);
   margin-left: -80px;
@@ -410,15 +363,24 @@ input:focus {
   font-size: 14px;
   text-align: right;
 }
-
-.banner1 h3 {
+.banner1 .ban1 img,
+.banner1 .ban2 img,
+.banner1 .ban3 img {
+  width: 320px;
+  height: 525px;
+  margin-left: 40px;
+}
+.banner1 .ban1 h3,
+.banner1 .ban2 h3,
+.banner1 .ban3 h3 {
   font-family: "GmarketSansLight";
   text-align: left;
   font-size: 16px;
   margin: 10px 0px 10px 40px;
 }
-
-.banner1 h4 {
+.banner1 .ban1 h4,
+.banner1 .ban2 h4,
+.banner1 .ban3 h4 {
   text-align: left;
   font-size: 15px;
   margin-left: 40px;
@@ -431,56 +393,46 @@ input:focus {
   height: 1600px;
   margin: 0 auto;
 }
-
-.ban4,
-.ban5 {
+.banner2 .ban4,
+.banner2 .ban5 {
   margin-top: 200px;
 }
-
-.ban4 {
+.banner2 .ban4 {
   float: left;
 }
-
-.ban4 img {
+.banner2 .ban4 img {
   width: 663px;
   height: 420px;
   margin-left: 40px;
 }
-
-.ban5 {
+.banner2 .ban5 {
   float: right;
   padding-right: 40px;
 }
-
-.ban5 img {
+.banner2 .ban5 img {
   width: 367px;
   height: 630px;
   margin-left: 40px;
 }
-
-.ban6 {
+.banner2 .ban6 {
   float: left;
   padding-top: 200px;
 }
-
-.ban6 img {
+.banner2 .ban6 img {
   width: 367px;
   height: 630px;
   margin-left: 40px;
 }
-
-.ban7 {
+.banner2 .ban7 {
   float: right;
   padding-top: 300px;
   padding-right: 40px;
 }
-
-.ban7 img {
+.banner2 .ban7 img {
   width: 663px;
   height: 420px;
   margin-left: 40px;
 }
-
 .banner2 h2 {
   width: 200px;
   transform: rotate(270deg);
@@ -491,14 +443,12 @@ input:focus {
   font-size: 14px;
   text-align: right;
 }
-
 .banner2 h3 {
   font-family: "GmarketSansLight";
   text-align: left;
   font-size: 16px;
   margin: 10px 0px 10px 40px;
 }
-
 .banner2 h4 {
   text-align: left;
   font-size: 15px;

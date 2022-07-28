@@ -4,11 +4,6 @@ document.querySelector('.mm1').addEventListener('mouseover', function () {
     document.querySelector('.sb2').style.display = 'none';
     document.querySelector('.sb3').style.display = 'none';
     document.querySelector('.sb4').style.display = 'none';
-    this.classList.add('mm_font');
-    document.querySelector('.mm2').classList.remove('mm_font');
-    document.querySelector('.mm3').classList.remove('mm_font');
-    document.querySelector('.mm4').classList.remove('mm_font');
-    document.querySelector('.mm5').classList.remove('mm_font');
     document.querySelector('#dark').classList.add('dark_mode');
 })
 document.querySelector('.mm2').addEventListener('mouseover', function () {
@@ -16,11 +11,6 @@ document.querySelector('.mm2').addEventListener('mouseover', function () {
     document.querySelector('.sb1').style.display = 'none';
     document.querySelector('.sb3').style.display = 'none';
     document.querySelector('.sb4').style.display = 'none';
-    this.classList.add('mm_font');
-    document.querySelector('.mm1').classList.remove('mm_font');
-    document.querySelector('.mm3').classList.remove('mm_font');
-    document.querySelector('.mm4').classList.remove('mm_font');
-    document.querySelector('.mm5').classList.remove('mm_font');
     document.querySelector('#dark').classList.add('dark_mode');
 })
 document.querySelector('.mm3').addEventListener('mouseover', function () {
@@ -28,11 +18,6 @@ document.querySelector('.mm3').addEventListener('mouseover', function () {
     document.querySelector('.sb1').style.display = 'none';
     document.querySelector('.sb2').style.display = 'none';
     document.querySelector('.sb4').style.display = 'none';
-    this.classList.add('mm_font');
-    document.querySelector('.mm1').classList.remove('mm_font');
-    document.querySelector('.mm2').classList.remove('mm_font');
-    document.querySelector('.mm4').classList.remove('mm_font');
-    document.querySelector('.mm5').classList.remove('mm_font');
     document.querySelector('#dark').classList.add('dark_mode');
 })
 document.querySelector('.mm4').addEventListener('mouseover', function () {
@@ -40,11 +25,6 @@ document.querySelector('.mm4').addEventListener('mouseover', function () {
     document.querySelector('.sb1').style.display = 'none';
     document.querySelector('.sb2').style.display = 'none';
     document.querySelector('.sb3').style.display = 'none';
-    this.classList.add('mm_font');
-    document.querySelector('.mm1').classList.remove('mm_font');
-    document.querySelector('.mm2').classList.remove('mm_font');
-    document.querySelector('.mm3').classList.remove('mm_font');
-    document.querySelector('.mm5').classList.remove('mm_font');
     document.querySelector('#dark').classList.add('dark_mode');
 })
 document.querySelector('.mm5').addEventListener('mouseover', function () {
@@ -52,11 +32,6 @@ document.querySelector('.mm5').addEventListener('mouseover', function () {
     document.querySelector('.sb1').style.display = 'none';
     document.querySelector('.sb2').style.display = 'none';
     document.querySelector('.sb3').style.display = 'none';
-    this.classList.add('mm_font');
-    document.querySelector('.mm1').classList.remove('mm_font');
-    document.querySelector('.mm2').classList.remove('mm_font');
-    document.querySelector('.mm3').classList.remove('mm_font');
-    document.querySelector('.mm4').classList.remove('mm_font');
     document.querySelector('#dark').classList.add('dark_mode');
 })
 document.querySelector('header').addEventListener('mouseleave', function () {
@@ -64,11 +39,6 @@ document.querySelector('header').addEventListener('mouseleave', function () {
     document.querySelector('.sb2').style.display = 'none';
     document.querySelector('.sb3').style.display = 'none';
     document.querySelector('.sb4').style.display = 'none';
-    document.querySelector('.mm1').classList.remove('mm_font');
-    document.querySelector('.mm2').classList.remove('mm_font');
-    document.querySelector('.mm3').classList.remove('mm_font');
-    document.querySelector('.mm4').classList.remove('mm_font');
-    document.querySelector('.mm5').classList.remove('mm_font');
     document.querySelector('#dark').classList.remove('dark_mode');
 })
 
