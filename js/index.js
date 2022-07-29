@@ -121,8 +121,27 @@ $(window).scroll(function () {
         $('.bs').css('transform', 'translateY(0px)').css('opacity', 1);
     }
 
-    var scroll_banner = $('.banner1').offset().top;
-    if (scrolling > scroll_banner - 300) {
+    var scroll_banner1 = $('.banner1').offset().top;
+    if (scrolling > scroll_banner1 - 300) {
         $('.ban1, .ban2, .ban3').css('opacity', "1").css('transform', 'translateY(0px)');
     }
+
+    var scroll_banner2 = $('.banner2').offset().top;
+    if (scrolling > scroll_banner2 - 400) {
+        $('.ban4').css('opacity', '1');
+        $('.ban5').css('opacity', '1').css('transform', 'translateY(0px)');
+    }
+
+    var scroll_banner3 = $('.ban4 img').offset().top;
+    if (scrolling > scroll_banner3 - 250) {
+        $('.ban6').css('opacity', '1').css('transform', 'translateY(0px)');
+    }
+
+    var scroll_banner4 = $('.ban6 img').offset().top;
+    if (scrolling > scroll_banner4 - 550) {
+        $('.ban7').css('opacity', '1').css('transform', 'translateY(0px)');
+    }
+
+    //스크롤시 배경 색 그라데이션
+    $('.bg_color').css('opacity', 0 + $(window).scrollTop() * 0.3 / 1000);
 })
