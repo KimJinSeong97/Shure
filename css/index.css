@@ -36,6 +36,10 @@ a {
   transition: all 0.25s;
 }
 
+.dot_color {
+  background-color: #4477be;
+}
+
 header {
   width: 100%;
   height: 60px;
@@ -61,7 +65,6 @@ header nav .main_menu {
   margin: 0 auto;
   font-size: 18px;
   letter-spacing: -0.025em;
-  cursor: pointer;
   box-sizing: border-box;
 }
 header nav .main_menu a {
@@ -84,7 +87,31 @@ header nav .main_menu a::after {
   bottom: -15px;
   transition: all 0.3s;
 }
-header nav .main_menu a:hover::after {
+header nav .main_menu .sub_menu {
+  width: 100%;
+  height: 50px;
+  background-color: #f7f7f7;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  z-index: 4;
+  display: none;
+  font-size: 16px;
+}
+header nav .main_menu .sub_menu a {
+  margin: 0 20px 0 20px;
+  letter-spacing: -0.025em;
+  cursor: pointer;
+}
+header nav .main_menu .sub_menu a:hover {
+  font-weight: 600;
+}
+header nav .main_menu:hover > a::after {
   width: 100%;
   left: 0;
 }
@@ -187,28 +214,6 @@ header .recommand a:hover {
   border-color: #79a3dc;
   color: #4477be;
 }
-header .sub_menu {
-  width: 100%;
-  height: 50px;
-  background-color: #f7f7f7;
-  position: absolute;
-  top: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  z-index: 4;
-  display: none;
-}
-header .sub_menu a {
-  margin: 0 20px 0 20px;
-  letter-spacing: -0.025em;
-  cursor: pointer;
-}
-header .sub_menu a:hover {
-  font-weight: 600;
-}
 
 .slide_box {
   width: 400vw;
@@ -231,11 +236,12 @@ header .sub_menu a:hover {
 }
 .slide_box .slide .slide_text .new {
   width: 40px;
-  height: 20px;
+  height: 15px;
   background-color: #4477be;
   color: #fff;
   font-size: 13px;
   text-align: center;
+  padding: 2px 0px 2px 0px;
 }
 .slide_box .slide .slide_text h2 {
   font-size: 46px;
@@ -363,6 +369,9 @@ header .sub_menu a:hover {
   width: 400px;
   text-align: center;
   cursor: pointer;
+  transform: translateY(120px);
+  transition: all 0.75s;
+  opacity: 0;
 }
 .best_seller .bs_wrap .bs_box .bs img {
   width: 400px;
@@ -399,6 +408,17 @@ header .sub_menu a:hover {
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+.banner1 .ban1,
+.banner1 .ban3 {
+  transform: translateY(50px);
+  transition: all 0.75s;
+  opacity: 0;
+}
+.banner1 .ban2 {
+  transform: translateY(-50px);
+  transition: all 0.75s;
+  opacity: 0;
 }
 .banner1 .ban1,
 .banner1 .ban2,
@@ -447,6 +467,7 @@ header .sub_menu a:hover {
   width: 1200px;
   height: 1600px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 .banner2 .ban4,
 .banner2 .ban5 {

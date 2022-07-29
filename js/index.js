@@ -111,3 +111,18 @@ $(function () {
         bsbox.style.marginLeft = `${-400 * page}px`;
     };
 })
+
+//스크롤하면 나타내는 이벤트
+$(window).scroll(function () {
+    var scrolling = $(this).scrollTop();
+
+    var scroll_bswrap = $('.bs_wrap').offset().top;
+    if (scrolling > scroll_bswrap - 600) {
+        $('.bs').css('transform', 'translateY(0px)').css('opacity', 1);
+    }
+
+    var scroll_banner = $('.banner1').offset().top;
+    if (scrolling > scroll_banner - 300) {
+        $('.ban1, .ban2, .ban3').css('opacity', "1").css('transform', 'translateY(0px)');
+    }
+})
