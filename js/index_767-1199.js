@@ -1,46 +1,46 @@
 //nav mouseover
-// document.querySelector('.mm1').addEventListener('mouseover', function () {
-//     document.querySelector('.sb1').style.display = 'flex';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('.mm2').addEventListener('mouseover', function () {
-//     document.querySelector('.sb2').style.display = 'flex';
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('.mm3').addEventListener('mouseover', function () {
-//     document.querySelector('.sb3').style.display = 'flex';
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('.mm4').addEventListener('mouseover', function () {
-//     document.querySelector('.sb4').style.display = 'flex';
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('.mm5').addEventListener('mouseover', function () {
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('header').addEventListener('mouseleave', function () {
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('#dark').classList.remove('dark_mode');
-// })
+document.querySelector('.mm1').addEventListener('mouseover', function () {
+    document.querySelector('.sb1').style.display = 'flex';
+    document.querySelector('.sb2').style.display = 'none';
+    document.querySelector('.sb3').style.display = 'none';
+    document.querySelector('.sb4').style.display = 'none';
+    document.querySelector('#dark').classList.add('dark_mode');
+})
+document.querySelector('.mm2').addEventListener('mouseover', function () {
+    document.querySelector('.sb2').style.display = 'flex';
+    document.querySelector('.sb1').style.display = 'none';
+    document.querySelector('.sb3').style.display = 'none';
+    document.querySelector('.sb4').style.display = 'none';
+    document.querySelector('#dark').classList.add('dark_mode');
+})
+document.querySelector('.mm3').addEventListener('mouseover', function () {
+    document.querySelector('.sb3').style.display = 'flex';
+    document.querySelector('.sb1').style.display = 'none';
+    document.querySelector('.sb2').style.display = 'none';
+    document.querySelector('.sb4').style.display = 'none';
+    document.querySelector('#dark').classList.add('dark_mode');
+})
+document.querySelector('.mm4').addEventListener('mouseover', function () {
+    document.querySelector('.sb4').style.display = 'flex';
+    document.querySelector('.sb1').style.display = 'none';
+    document.querySelector('.sb2').style.display = 'none';
+    document.querySelector('.sb3').style.display = 'none';
+    document.querySelector('#dark').classList.add('dark_mode');
+})
+document.querySelector('.mm5').addEventListener('mouseover', function () {
+    document.querySelector('.sb4').style.display = 'none';
+    document.querySelector('.sb1').style.display = 'none';
+    document.querySelector('.sb2').style.display = 'none';
+    document.querySelector('.sb3').style.display = 'none';
+    document.querySelector('#dark').classList.add('dark_mode');
+})
+document.querySelector('header').addEventListener('mouseleave', function () {
+    document.querySelector('.sb1').style.display = 'none';
+    document.querySelector('.sb2').style.display = 'none';
+    document.querySelector('.sb3').style.display = 'none';
+    document.querySelector('.sb4').style.display = 'none';
+    document.querySelector('#dark').classList.remove('dark_mode');
+})
 
 //검색 아이콘 클릭 -> 창 오픈
 $(function () {
