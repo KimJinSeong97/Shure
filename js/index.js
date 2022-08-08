@@ -1,72 +1,5 @@
-//nav mouseover
-// document.querySelector('.mm1').addEventListener('mouseover', function () {
-//     document.querySelector('.sb1').style.display = 'flex';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('.mm2').addEventListener('mouseover', function () {
-//     document.querySelector('.sb2').style.display = 'flex';
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('.mm3').addEventListener('mouseover', function () {
-//     document.querySelector('.sb3').style.display = 'flex';
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('.mm4').addEventListener('mouseover', function () {
-//     document.querySelector('.sb4').style.display = 'flex';
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('.mm5').addEventListener('mouseover', function () {
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('#dark').classList.add('dark_mode');
-// })
-// document.querySelector('header').addEventListener('mouseleave', function () {
-//     document.querySelector('.sb1').style.display = 'none';
-//     document.querySelector('.sb2').style.display = 'none';
-//     document.querySelector('.sb3').style.display = 'none';
-//     document.querySelector('.sb4').style.display = 'none';
-//     document.querySelector('#dark').classList.remove('dark_mode');
-// })
-
-//검색 아이콘 클릭 -> 창 오픈
-$(function () {
-    $('#search_button').on('click', function () {
-        $('.search').slideToggle(250);
-        $('#dark').toggleClass('dark_mode');
-    });
-    $('nav ul').mouseover(function () {
-        $('.search').css('display', 'none');
-    });
-
-    //1199 전 사이즈!!
-    $('.main_menu').click(function(){
-        $(this).children('.sub_menu').toggle();
-        
-        $(this).toggleClass('dot_color');
-        $(this).children('a').toggleClass('dot_color');
-    });
-
-    $('.menu_bar').click(function(){
-        $('nav').toggle();
-        $('.utility i:nth-of-type(3)').toggle();
-    });
-})
-
-//slide button event
+// 모든 사이즈 공용 스크립트
+// 배너 슬라이드
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 const sbox = document.querySelector('.slide_box');
@@ -99,63 +32,195 @@ $(function () {
     })
 })
 
-// best seller slide
-$(function () {
-    var page = 0;
-    const prev2 = document.querySelector('.prev2');
-    const next2 = document.querySelector('.next2');
-    const bsbox = document.querySelector('.bs_box');
+// 사이즈 별 스크립트
+if (window.matchMedia('(min-width: 1200px)').matches) {
+    // 베스트 셀러 슬라이드
+    $(function () {
+        var page = 0;
+        const prev2 = document.querySelector('.prev2');
+        const next2 = document.querySelector('.next2');
+        const bsbox = document.querySelector('.bs_box');
 
-    prev2.onclick = function () {
-        page--;
-        if (page < 0) {
-            page = 0;
-            return;
+        prev2.onclick = function () {
+            page--;
+            if (page < 0) {
+                page = 0;
+                return;
+            }
+            bsbox.style.marginLeft = -400 * page + 'px';
+        };
+
+        next2.onclick = function () {
+            page++;
+            if (page > document.querySelectorAll('.bs').length - 3) {
+                page = document.querySelectorAll('.bs').length - 3;
+                return;
+            }
+            bsbox.style.marginLeft = `${-400 * page}px`;
+        };
+    })
+    // 스크롤하면 이미지 나오는 이벤트
+    $(window).scroll(function () {
+        var scrolling = $(this).scrollTop();
+
+        var scroll_bswrap = $('.bs_wrap').offset().top;
+        if (scrolling > scroll_bswrap - 600) {
+            $('.bs').css('transform', 'translateY(0px)').css('opacity', 1);
         }
-        bsbox.style.marginLeft = -400 * page + 'px';
-    };
 
-    next2.onclick = function () {
-        page++;
-        if (page > document.querySelectorAll('.bs').length - 3) {
-            page = document.querySelectorAll('.bs').length - 3;
-            return;
+        var scroll_banner1 = $('.banner1').offset().top;
+        if (scrolling > scroll_banner1 - 300) {
+            $('.ban1, .ban2, .ban3').css('opacity', "1").css('transform', 'translateY(0px)');
         }
-        bsbox.style.marginLeft = `${-400 * page}px`;
-    };
-})
 
-//스크롤하면 나타내는 이벤트
-$(window).scroll(function () {
-    var scrolling = $(this).scrollTop();
+        var scroll_banner2 = $('.banner2').offset().top;
+        if (scrolling > scroll_banner2 - 400) {
+            $('.ban4').css('opacity', '1');
+            $('.ban5').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
 
-    var scroll_bswrap = $('.bs_wrap').offset().top;
-    if (scrolling > scroll_bswrap - 600) {
-        $('.bs').css('transform', 'translateY(0px)').css('opacity', 1);
-    }
+        var scroll_banner3 = $('.ban4 img').offset().top;
+        if (scrolling > scroll_banner3 - 250) {
+            $('.ban6').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
 
-    var scroll_banner1 = $('.banner1').offset().top;
-    if (scrolling > scroll_banner1 - 300) {
-        $('.ban1, .ban2, .ban3').css('opacity', "1").css('transform', 'translateY(0px)');
-    }
+        var scroll_banner4 = $('.ban6 img').offset().top;
+        if (scrolling > scroll_banner4 - 550) {
+            $('.ban7').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
 
-    var scroll_banner2 = $('.banner2').offset().top;
-    if (scrolling > scroll_banner2 - 400) {
-        $('.ban4').css('opacity', '1');
-        $('.ban5').css('opacity', '1').css('transform', 'translateY(0px)');
-    }
+        // 스크롤시 배경 색 그라데이션
+        $('.bg_color').css('opacity', 0 + $(window).scrollTop() * 0.3 / 1000);
+        $('.bg_img img').css('opacity', 0 + $(window).scrollTop() * 1 / 3500);
+    })
+} else if (window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches) {
+    // 베스트 셀러 슬라이드
+    $(function () {
+        var page = 0;
+        const prev2 = document.querySelector('.prev2');
+        const next2 = document.querySelector('.next2');
+        const bsbox = document.querySelector('.bs_box');
 
-    var scroll_banner3 = $('.ban4 img').offset().top;
-    if (scrolling > scroll_banner3 - 250) {
-        $('.ban6').css('opacity', '1').css('transform', 'translateY(0px)');
-    }
+        prev2.onclick = function () {
+            page--;
+            if (page < 0) {
+                page = 0;
+                return;
+            }
+            bsbox.style.marginLeft = -51.5 * page + '%';
+        };
 
-    var scroll_banner4 = $('.ban6 img').offset().top;
-    if (scrolling > scroll_banner4 - 550) {
-        $('.ban7').css('opacity', '1').css('transform', 'translateY(0px)');
-    }
+        next2.onclick = function () {
+            page++;
+            if (page > document.querySelectorAll('.bs').length - 2) {
+                page = document.querySelectorAll('.bs').length - 2;
+                return;
+            }
+            bsbox.style.marginLeft = `${-51.5 * page}%`;
+        };
+    })
+    // 스크롤하면 이미지 나오는 이벤트
+    $(window).scroll(function () {
+        var scrolling = $(this).scrollTop();
 
-    //스크롤시 배경 색 그라데이션
-    $('.bg_color').css('opacity', 0 + $(window).scrollTop() * 0.3 / 1000);
-    $('.bg_img img').css('opacity', 0 + $(window).scrollTop() * 1 / 3500);
-})
+        var scroll_bswrap = $('.bs_wrap').offset().top;
+        if (scrolling > scroll_bswrap - 600) {
+            $('.bs').css('transform', 'translateY(0px)').css('opacity', 1);
+        }
+
+        var scroll_banner1 = $('.banner1').offset().top;
+        if (scrolling > scroll_banner1 - 300) {
+            $('.ban1, .ban2, .ban3').css('opacity', "1").css('transform', 'translateY(0px)');
+        }
+
+        var scroll_banner2 = $('.banner2').offset().top;
+        if (scrolling > scroll_banner2 - 400) {
+            $('.ban4').css('opacity', '1');
+            $('.ban5').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
+
+        var scroll_banner3 = $('.ban4 img').offset().top;
+        if (scrolling > scroll_banner3 - 250) {
+            $('.ban6').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
+
+        var scroll_banner4 = $('.ban6 img').offset().top;
+        if (scrolling > scroll_banner4 - 550) {
+            $('.ban7').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
+
+        // 스크롤시 배경 색 그라데이션
+        $('.bg_color').css('opacity', 0 + $(window).scrollTop() * 0.3 / 1000);
+        $('.bg_img img').css('opacity', 0 + $(window).scrollTop() * 1 / 3500);
+    })
+} else {
+    // 베스트 셀러 슬라이드
+    $(function () {
+        var page = 0;
+        const prev2 = document.querySelector('.prev2');
+        const next2 = document.querySelector('.next2');
+        const bsbox = document.querySelector('.bs_box');
+
+        prev2.onclick = function () {
+            page--;
+            if (page < 0) {
+                page = 0;
+                return;
+            }
+            bsbox.style.marginLeft = -49.5 * page + 'vw';
+        };
+
+        next2.onclick = function () {
+            page++;
+            if (page > document.querySelectorAll('.bs').length - 2) {
+                page = document.querySelectorAll('.bs').length - 2;
+                return;
+            }
+            bsbox.style.marginLeft = `${-49.5 * page}vw`;
+        };
+    })
+
+    // 스크롤하면 이미지 나오는 이벤트
+    $(window).scroll(function () {
+        var scrolling = $(this).scrollTop();
+
+        var scroll_bswrap = $('.bs_wrap').offset().top;
+        if (scrolling > scroll_bswrap - 600) {
+            $('.bs').css('transform', 'translateY(0px)').css('opacity', 1);
+        }
+
+        var scroll_banner1 = $('.banner1').offset().top;
+        if (scrolling > scroll_banner1 - 750) {
+            $('.ban1').css('opacity', "1").css('transform', 'translateY(0px)');
+        }
+
+        if (scrolling > scroll_banner1 - 0) {
+            $('.ban2').css('opacity', "1").css('transform', 'translateY(0px)');
+        }
+
+        if (scrolling > scroll_banner1 - -900) {
+            $('.ban3').css('opacity', "1").css('transform', 'translateY(0px)');
+        }
+
+        var scroll_banner2 = $('.banner2').offset().top;
+        if (scrolling > scroll_banner2 - 750) {
+            $('.ban4').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
+
+        if (scrolling > scroll_banner2 - 300) {
+            $('.ban5').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
+
+        var scroll_banner3 = $('.ban6 img').offset().top;
+        if (scrolling > scroll_banner3 - 600) {
+            $('.ban6').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
+
+        if (scrolling > scroll_banner3 - 0) {
+            $('.ban7').css('opacity', '1').css('transform', 'translateY(0px)');
+        }
+
+        // 스크롤시 배경 색 그라데이션
+        $('.bg_color').css('opacity', 0 + $(window).scrollTop() * 0.3 / 1000);
+    })
+}
