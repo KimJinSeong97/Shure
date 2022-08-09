@@ -767,9 +767,46 @@ header nav .nav_bot_bar {
   color: #fff;
 }
 
+#meets_intro {
+  width: 100%;
+  height: 900px;
+  background-color: #a3a3a3;
+}
+#meets_intro .intro_text h2 {
+  padding-top: 30px;
+  text-align: center;
+  color: #fff;
+}
+#meets_intro .intro_text h2 span {
+  font-size: 24px;
+  display: block;
+  letter-spacing: 2px;
+}
+#meets_intro .intro_text h2 b {
+  font-size: 58px;
+  display: block;
+}
+#meets_intro .intro_text p {
+  text-align: center;
+  color: #fff;
+  padding-top: 20px;
+  letter-spacing: 1px;
+}
+#meets_intro .slide_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+#meets_intro .slide_wrap .cont {
+  max-width: 412px;
+  height: 412px;
+  background-color: #666;
+}
+
 #meets {
   width: 100%;
-  height: 1000px;
+  height: 900px;
   padding: 150px 0px 100px;
   border-top: 1px solid #ddd;
 }
@@ -803,6 +840,7 @@ header nav .nav_bot_bar {
   color: #4477be;
 }
 #meets .inner li .txt .eng_name {
+  font-size: 16px;
   margin: 2% 0% 5%;
   color: #79a3dc;
   font-family: "Yanone Kaffeesatz", sans-serif;
@@ -832,4 +870,68 @@ header nav .nav_bot_bar {
   width: 100%;
   height: 650px;
   background-color: #f6f6f8;
+}
+#interview .inner {
+  width: 1200px;
+  height: 650px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#interview .inner .interview_img {
+  width: 50%;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+#interview .inner ul {
+  width: 45%;
+}
+#interview .inner ul li h3 {
+  color: #333;
+  font-size: 16.5px;
+  line-height: 1.8;
+}
+#interview .inner ul li p {
+  margin: 3% 0% 6% 0%;
+  color: #747474;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.collabo_logo {
+  width: 650px;
+  margin: 0 auto;
+  padding-top: 180px;
+}
+.collabo_logo h3 {
+  width: 60px;
+  height: 3px;
+  margin: 30px auto 0;
+  background-color: #a3a3a3;
+}
+.collabo_logo p {
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.8;
+  color: #666;
+  margin-top: 20px;
+}
+
+.collabo_video {
+  width: 1200px;
+  height: 270px;
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 140px;
+}
+.collabo_video h4 {
+  font-size: 24px;
+  color: #666;
+  text-align: center;
+  margin-top: 15px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
