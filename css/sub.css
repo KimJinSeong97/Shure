@@ -770,7 +770,8 @@ header nav .nav_bot_bar {
 #meets_intro {
   width: 100%;
   height: 900px;
-  background-color: #a3a3a3;
+  background: linear-gradient(135deg, rgb(115, 60, 60), rgb(0, 0, 0) 66.6%);
+  border-top: 1px solid #ddd;
 }
 #meets_intro .intro_text h2 {
   padding-top: 30px;
@@ -792,16 +793,59 @@ header nav .nav_bot_bar {
   padding-top: 20px;
   letter-spacing: 1px;
 }
-#meets_intro .slide_wrap {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
+#meets_intro .swiper-container {
+  width: 75%;
+  height: 45%;
+  margin: 0 auto;
+  padding-top: 40px;
 }
-#meets_intro .slide_wrap .cont {
-  max-width: 412px;
-  height: 412px;
-  background-color: #666;
+#meets_intro .swiper-container .swiper-slide {
+  border-radius: 30px;
+  box-shadow: 14px -7px 50px -5px rgba(10, 10, 10, 0.5);
+}
+#meets_intro .swiper-container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+}
+#meets_intro .swiper-container .swiper-slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+}
+#meets_intro .swiper-container .swiper-button-next,
+#meets_intro .swiper-container .swiper-button-prev,
+#meets_intro .swiper-container .swiper-pagination {
+  color: #fff;
+}
+#meets_intro .swiper-container .slide2 video,
+#meets_intro .swiper-container .slide3 video,
+#meets_intro .swiper-container .slide4 video,
+#meets_intro .swiper-container .slide5 video {
+  display: none;
+}
+#meets_intro .intro_text_btm h2 {
+  padding-top: 30px;
+  text-align: center;
+  color: #fff;
+}
+#meets_intro .intro_text_btm h2 b {
+  font-size: 30px;
+  display: block;
+  letter-spacing: -1;
+}
+#meets_intro .intro_text_btm p {
+  text-align: center;
+  color: #fff;
+  padding-top: 20px;
+  font-size: 18px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
 #meets {
