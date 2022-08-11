@@ -1,4 +1,4 @@
-//미츠 슬라이더
+// 미츠 아티스트 슬라이더
 var slider = new Swiper(".swiper-container", {
     slidesPerView: 3,
     centeredSlides: true,
@@ -55,5 +55,60 @@ var slider = new Swiper(".swiper-container", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
+    }
+});
+
+// 콜라보 동영상 재생
+$(function () {
+    $('.img1').click(function () {
+        $('.video1, .close').css('display', 'block');
+        $('.video1').attr('src', 'https://www.youtube.com/embed/om2pQDgteas?autoplay=1&mute=1');
+    })
+    $('.img2').click(function () {
+        $('.video2, .close').css('display', 'block');
+        $('.video2').attr('src', 'https://www.youtube.com/embed/WzP1EDGEiE0?autoplay=1&mute=1');
+    })
+    $('.img3').click(function () {
+        $('.video3, .close').css('display', 'block');
+        $('.video3').attr('src', 'https://www.youtube.com/embed/sBl4JV-7su0?autoplay=1&mute=1');
+    })
+    $('.close').click(function () {
+        $('.collabo_video iframe').css('display', 'none');
+        $('.close').css('display', 'none');
+    })
+})
+
+$(window).scroll(function () {
+    var scrolling = $(this).scrollTop();
+
+    var meets = $('#meets').offset().top;
+    var interview = $('#interview').offset().top;
+    var collabo = $('#collabo').offset().top;
+
+    if (scrolling > meets - 550) {
+        $('#meets .inner h2, .inner p').css('transform', 'translateY(0px)').css('opacity', 1);
+    }
+    if (scrolling > meets - 200) {
+        $('#meets .inner li').css('transform', 'translateY(0px)').css('opacity', 1);
+    }
+
+    if (scrolling > interview - 800) {
+        $('.interview_logo, #interview').css('transform', 'translateY(0px)').css('opacity', 1);
+    }
+    if (scrolling > interview - 500) {
+        $('.interview_img').css('transform', 'translateY(0px)').css('opacity', 1);
+    }
+    if (scrolling > interview - 300) {
+        $('#interview .inner li').css('transform', 'translateY(0px)').css('opacity', 1);
+    }
+
+    if (scrolling > collabo - 400) {
+        $('.collabo_logo h2, .collabo_logo h3').css('transform', 'translateY(0px)').css('opacity', 1);
+    }
+    if (scrolling > collabo - 200) {
+        $('.collabo_logo p').css('transform', 'translateY(0px)').css('opacity', 1);
+    }
+    if (scrolling > collabo - 0) {
+        $('.collabo_video .img1, .img2, .img3, h4').css('transform', 'translateY(0px)').css('opacity', 1);
     }
 })
