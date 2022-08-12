@@ -1,8 +1,8 @@
 // 미츠 아티스트 슬라이더
 var slider = new Swiper(".swiper-container", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     centeredSlides: true,
-    spaceBetween: 60,
+    spaceBetween: 0,
     on: {
         slideChange: function () {
             if (this.activeIndex == 0) {
@@ -55,6 +55,15 @@ var slider = new Swiper(".swiper-container", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 60,
+        },
+        1200: {
+            slidesPerView: 3,
+        }
     }
 });
 
@@ -80,7 +89,6 @@ $(function () {
 
 $(window).scroll(function () {
     var scrolling = $(this).scrollTop();
-
     var meets = $('#meets').offset().top;
     var interview = $('#interview').offset().top;
     var collabo = $('#collabo').offset().top;

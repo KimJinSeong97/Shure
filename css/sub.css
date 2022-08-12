@@ -767,293 +767,876 @@ header nav .nav_bot_bar {
   color: #fff;
 }
 
-#meets_intro {
-  width: 100%;
-  height: 900px;
-  background: linear-gradient(135deg, rgb(115, 60, 60), rgb(0, 0, 0) 66.6%);
-  border-top: 1px solid #ddd;
-}
-#meets_intro .intro_text h2 {
-  padding-top: 30px;
-  text-align: center;
-  color: #fff;
-}
-#meets_intro .intro_text h2 span {
-  font-size: 24px;
-  display: block;
-  letter-spacing: 2px;
-}
-#meets_intro .intro_text h2 b {
-  font-size: 58px;
-  display: block;
-}
-#meets_intro .intro_text p {
-  text-align: center;
-  color: #fff;
-  padding-top: 20px;
-  letter-spacing: 1px;
-}
-#meets_intro .swiper-container {
-  width: 75%;
-  height: 45%;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-#meets_intro .swiper-container .swiper-slide {
-  border-radius: 30px;
-  box-shadow: 14px -7px 50px -5px rgba(10, 10, 10, 0.5);
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-#meets_intro .swiper-container .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 30px;
-}
-#meets_intro .swiper-container .swiper-slide video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 30px;
-}
-#meets_intro .swiper-container .swiper-button-next,
+@media (max-width: 767px) {
+  #meets_intro {
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(135deg, rgb(115, 60, 60), rgb(0, 0, 0) 66.6%);
+    border-top: 1px solid #ddd;
+  }
+  #meets_intro .intro_text h2 {
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  #meets_intro .intro_text h2 span {
+    font-size: 24px;
+    display: block;
+    letter-spacing: 2px;
+  }
+  #meets_intro .intro_text h2 b {
+    font-size: 58px;
+    display: block;
+  }
+  #meets_intro .intro_text p {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    letter-spacing: 1px;
+  }
+  #meets_intro .swiper-container {
+    width: 100vw;
+    height: 45%;
+    padding-top: 40px;
+  }
+  #meets_intro .swiper-container .swiper-slide {
+    border-radius: 30px;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  #meets_intro .swiper-container .swiper-slide img {
+    display: block;
+    width: 45vw;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 14px -7px 50px -5px rgba(10, 10, 10, 0.5);
+  }
+  #meets_intro .swiper-container .swiper-slide video {
+    display: block;
+    width: 45vw;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 14px -7px 50px -5px rgba(10, 10, 10, 0.5);
+  }
+  #meets_intro .swiper-container .swiper-button-next,
 #meets_intro .swiper-container .swiper-button-prev,
 #meets_intro .swiper-container .swiper-pagination {
-  color: #fff;
-}
-#meets_intro .swiper-container .slide2 video,
+    color: #fff;
+  }
+  #meets_intro .swiper-container .slide2 video,
 #meets_intro .swiper-container .slide3 video,
 #meets_intro .swiper-container .slide4 video,
 #meets_intro .swiper-container .slide5 video {
-  display: none;
+    display: none;
+  }
+  #meets_intro .intro_text_btm h2 {
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  #meets_intro .intro_text_btm h2 b {
+    font-size: 30px;
+    display: block;
+    letter-spacing: -1px;
+  }
+  #meets_intro .intro_text_btm p {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    font-size: 18px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+  }
+  #meets {
+    width: 100%;
+    height: 650px;
+    padding: 150px 0px 100px;
+    border-top: 1px solid #ddd;
+  }
+  #meets .inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #meets .inner h2 {
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #meets .inner h2 img {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  #meets .inner .artist_logo {
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #meets .inner .artist_logo img {
+    width: 20%;
+    margin-bottom: 2%;
+  }
+  #meets .inner li {
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #meets .inner li .img img {
+    width: 100%;
+    box-shadow: 14px -7px 50px -5px rgba(0, 0, 0, 0.5);
+  }
+  #meets .inner li .txt .kor_name {
+    font-size: 28px;
+    margin: 5% 0% 2%;
+    color: #4477be;
+  }
+  #meets .inner li .txt .eng_name {
+    font-size: 16px;
+    margin: 2% 0% 5%;
+    color: #79a3dc;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+  }
+  #meets .inner li .txt .kor_txt {
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.75;
+  }
+  #meets .inner li .txt .eng_txt {
+    color: #666;
+    margin-top: 14px;
+    line-height: 1.75;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+  }
+  .interview_logo {
+    width: 80%;
+    height: 45px;
+    margin: 0 auto;
+    background-image: url(../img/sub/interview.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview {
+    width: 100%;
+    height: 1000px;
+    background-color: #f6f6f8;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview .inner {
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #interview .inner .interview_img {
+    width: 85%;
+    position: absolute;
+    bottom: -5px;
+    left: 7.5%;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview .inner .interview_img img {
+    width: 100%;
+  }
+  #interview .inner ul {
+    width: 80%;
+    padding-top: 10%;
+  }
+  #interview .inner ul li {
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview .inner ul li h3 {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  #interview .inner ul li p {
+    margin: 3% 0% 6% 0%;
+    color: #747474;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  #collabo {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #collabo .collabo_logo {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 180px;
+  }
+  #collabo .collabo_logo h2 {
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_logo h2 img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #collabo .collabo_logo h3 {
+    width: 60px;
+    height: 3px;
+    margin: 30px auto 0;
+    background-color: #a3a3a3;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_logo p {
+    width: 80%;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.8;
+    color: #666;
+    margin-top: 20px;
+    margin-left: 10%;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_video {
+    width: 100%;
+    margin: 50px auto 0;
+    padding-bottom: 140px;
+  }
+  #collabo .collabo_video img {
+    width: 80%;
+    box-shadow: 5px -7px 20px -5px rgba(10, 10, 10, 0.3);
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+    margin-left: 10%;
+  }
+  #collabo .collabo_video h4 {
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 15px;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_video iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  #collabo .close {
+    font-size: 50px;
+    position: fixed;
+    top: 55px;
+    right: 27.5px;
+    cursor: pointer;
+    display: none;
+  }
+  #collabo .close i {
+    color: #fff;
+  }
 }
-#meets_intro .intro_text_btm h2 {
-  padding-top: 30px;
-  text-align: center;
-  color: #fff;
+@media (min-width: 768px) and (max-width: 1199px) {
+  #meets_intro {
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(135deg, rgb(115, 60, 60), rgb(0, 0, 0) 66.6%);
+    border-top: 1px solid #ddd;
+  }
+  #meets_intro .intro_text h2 {
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  #meets_intro .intro_text h2 span {
+    font-size: 24px;
+    display: block;
+    letter-spacing: 2px;
+  }
+  #meets_intro .intro_text h2 b {
+    font-size: 58px;
+    display: block;
+  }
+  #meets_intro .intro_text p {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    letter-spacing: 1px;
+  }
+  #meets_intro .swiper-container {
+    width: 100vw;
+    height: 45%;
+    padding-top: 40px;
+  }
+  #meets_intro .swiper-container .swiper-slide {
+    border-radius: 30px;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  #meets_intro .swiper-container .swiper-slide img {
+    display: block;
+    width: 45vw;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 14px -7px 50px -5px rgba(10, 10, 10, 0.5);
+  }
+  #meets_intro .swiper-container .swiper-slide video {
+    display: block;
+    width: 45vw;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 14px -7px 50px -5px rgba(10, 10, 10, 0.5);
+  }
+  #meets_intro .swiper-container .swiper-button-next,
+#meets_intro .swiper-container .swiper-button-prev,
+#meets_intro .swiper-container .swiper-pagination {
+    color: #fff;
+  }
+  #meets_intro .swiper-container .slide2 video,
+#meets_intro .swiper-container .slide3 video,
+#meets_intro .swiper-container .slide4 video,
+#meets_intro .swiper-container .slide5 video {
+    display: none;
+  }
+  #meets_intro .intro_text_btm h2 {
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  #meets_intro .intro_text_btm h2 b {
+    font-size: 30px;
+    display: block;
+    letter-spacing: -1px;
+  }
+  #meets_intro .intro_text_btm p {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    font-size: 18px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+  }
+  #meets {
+    width: 100%;
+    height: 900px;
+    padding: 150px 0px 100px;
+    border-top: 1px solid #ddd;
+  }
+  #meets .inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #meets .inner h2 {
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #meets .inner h2 img {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  #meets .inner .artist_logo {
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #meets .inner .artist_logo img {
+    width: 150px;
+    margin-bottom: 2%;
+  }
+  #meets .inner li {
+    width: 50%;
+    margin: 0 auto;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #meets .inner li .img img {
+    width: 100%;
+    box-shadow: 14px -7px 50px -5px rgba(0, 0, 0, 0.5);
+  }
+  #meets .inner li .txt .kor_name {
+    font-size: 28px;
+    margin: 5% 0% 2%;
+    color: #4477be;
+  }
+  #meets .inner li .txt .eng_name {
+    font-size: 16px;
+    margin: 2% 0% 5%;
+    color: #79a3dc;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+  }
+  #meets .inner li .txt .kor_txt {
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.75;
+  }
+  #meets .inner li .txt .eng_txt {
+    color: #666;
+    margin-top: 14px;
+    line-height: 1.75;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+  }
+  .interview_logo {
+    width: 100%;
+    height: 79px;
+    margin: 0 auto;
+    background-image: url(../img/sub/interview.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview {
+    width: 100%;
+    height: 650px;
+    background-color: #f6f6f8;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview .inner {
+    width: 100%;
+    height: 650px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #interview .inner .interview_img {
+    width: 55%;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview .inner .interview_img img {
+    width: 100%;
+  }
+  #interview .inner ul {
+    width: 40%;
+  }
+  #interview .inner ul li {
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview .inner ul li h3 {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  #interview .inner ul li p {
+    margin: 3% 0% 6% 0%;
+    color: #747474;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  #collabo {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #collabo .collabo_logo {
+    width: 650px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 180px;
+  }
+  #collabo .collabo_logo h2 {
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_logo h2 img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #collabo .collabo_logo h3 {
+    width: 60px;
+    height: 3px;
+    margin: 30px auto 0;
+    background-color: #a3a3a3;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_logo p {
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.8;
+    color: #666;
+    margin-top: 20px;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_video {
+    width: 100%;
+    height: 270px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 140px;
+  }
+  #collabo .collabo_video img {
+    width: 95%;
+    box-shadow: 5px -7px 20px -5px rgba(10, 10, 10, 0.3);
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+    margin-left: 2.5%;
+  }
+  #collabo .collabo_video h4 {
+    font-size: 24px;
+    color: #666;
+    text-align: center;
+    margin-top: 15px;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_video iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  #collabo .close {
+    font-size: 50px;
+    position: fixed;
+    top: 55px;
+    right: 27.5px;
+    cursor: pointer;
+    display: none;
+  }
+  #collabo .close i {
+    color: #fff;
+  }
 }
-#meets_intro .intro_text_btm h2 b {
-  font-size: 30px;
-  display: block;
-  letter-spacing: -1px;
-}
-#meets_intro .intro_text_btm p {
-  text-align: center;
-  color: #fff;
-  padding-top: 20px;
-  font-size: 18px;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-}
-
-#meets {
-  width: 100%;
-  height: 900px;
-  padding: 150px 0px 100px;
-  border-top: 1px solid #ddd;
-}
-#meets .inner {
-  width: 1200px;
-  margin: 0 auto;
-}
-#meets .inner h2 {
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#meets .inner h2 img {
-  width: 100%;
-  margin-bottom: 2%;
-}
-#meets .inner .artist_logo {
-  display: flex;
-  justify-content: flex-end;
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#meets .inner .artist_logo img {
-  width: 150px;
-  margin-bottom: 2%;
-}
-#meets .inner li {
-  width: 50%;
-  margin: 0 auto;
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#meets .inner li .img img {
-  width: 100%;
-  box-shadow: 14px -7px 50px -5px rgba(0, 0, 0, 0.5);
-}
-#meets .inner li .txt .kor_name {
-  font-size: 28px;
-  margin: 5% 0% 2%;
-  color: #4477be;
-}
-#meets .inner li .txt .eng_name {
-  font-size: 16px;
-  margin: 2% 0% 5%;
-  color: #79a3dc;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-}
-#meets .inner li .txt .kor_txt {
-  color: #666;
-  margin-top: 20px;
-  line-height: 1.75;
-}
-#meets .inner li .txt .eng_txt {
-  color: #666;
-  margin-top: 14px;
-  line-height: 1.75;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-}
-
-.interview_logo {
-  width: 1200px;
-  height: 79px;
-  margin: 0 auto;
-  background-image: url(../img/sub/interview.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-
-#interview {
-  width: 100%;
-  height: 650px;
-  background-color: #f6f6f8;
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#interview .inner {
-  width: 1200px;
-  height: 650px;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-#interview .inner .interview_img {
-  width: 55%;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#interview .inner .interview_img img {
-  width: 100%;
-}
-#interview .inner ul {
-  width: 40%;
-}
-#interview .inner ul li {
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#interview .inner ul li h3 {
-  color: #333;
-  font-size: 17px;
-  line-height: 1.8;
-}
-#interview .inner ul li p {
-  margin: 3% 0% 6% 0%;
-  color: #747474;
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-#collabo {
-  width: 100%;
-  margin: 0 auto;
-}
-#collabo .collabo_logo {
-  width: 650px;
-  margin: 0 auto;
-  position: relative;
-  padding-top: 180px;
-}
-#collabo .collabo_logo h2 {
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#collabo .collabo_logo h2 img {
-  width: 100%;
-  margin: 0 auto;
-}
-#collabo .collabo_logo h3 {
-  width: 60px;
-  height: 3px;
-  margin: 30px auto 0;
-  background-color: #a3a3a3;
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#collabo .collabo_logo p {
-  font-size: 17px;
-  text-align: center;
-  line-height: 1.8;
-  color: #666;
-  margin-top: 20px;
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#collabo .collabo_video {
-  width: 1200px;
-  height: 270px;
-  margin: 50px auto 0;
-  display: flex;
-  justify-content: space-evenly;
-  padding-bottom: 140px;
-}
-#collabo .collabo_video img {
-  box-shadow: 5px -7px 20px -5px rgba(10, 10, 10, 0.3);
-  cursor: pointer;
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#collabo .collabo_video h4 {
-  font-size: 24px;
-  color: #666;
-  text-align: center;
-  margin-top: 15px;
-  transform: translateY(100px);
-  transition: all 0.75s;
-  opacity: 0;
-}
-#collabo .collabo_video iframe {
-  border: none;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-}
-#collabo .close {
-  font-size: 50px;
-  position: fixed;
-  top: 55px;
-  right: 27.5px;
-  cursor: pointer;
-  display: none;
-}
-#collabo .close i {
-  color: #fff;
+@media (min-width: 1200px) {
+  #meets_intro {
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(135deg, rgb(115, 60, 60), rgb(0, 0, 0) 66.6%);
+    border-top: 1px solid #ddd;
+  }
+  #meets_intro .intro_text h2 {
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  #meets_intro .intro_text h2 span {
+    font-size: 24px;
+    display: block;
+    letter-spacing: 2px;
+  }
+  #meets_intro .intro_text h2 b {
+    font-size: 58px;
+    display: block;
+  }
+  #meets_intro .intro_text p {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    letter-spacing: 1px;
+  }
+  #meets_intro .swiper-container {
+    width: 100%;
+    height: 45%;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  #meets_intro .swiper-container .swiper-slide {
+    border-radius: 30px;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+  #meets_intro .swiper-container .swiper-slide img {
+    display: block;
+    width: 400px;
+    height: 100%;
+    margin: 0 auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 14px -7px 50px -5px rgba(10, 10, 10, 0.5);
+  }
+  #meets_intro .swiper-container .swiper-slide video {
+    display: block;
+    width: 400px;
+    height: 100%;
+    margin: 0 auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 14px -7px 50px -5px rgba(10, 10, 10, 0.5);
+  }
+  #meets_intro .swiper-container .swiper-button-next,
+#meets_intro .swiper-container .swiper-button-prev,
+#meets_intro .swiper-container .swiper-pagination {
+    color: #fff;
+  }
+  #meets_intro .swiper-container .slide2 video,
+#meets_intro .swiper-container .slide3 video,
+#meets_intro .swiper-container .slide4 video,
+#meets_intro .swiper-container .slide5 video {
+    display: none;
+  }
+  #meets_intro .intro_text_btm h2 {
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  #meets_intro .intro_text_btm h2 b {
+    font-size: 30px;
+    display: block;
+    letter-spacing: -1px;
+  }
+  #meets_intro .intro_text_btm p {
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    font-size: 18px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+  }
+  #meets {
+    width: 100%;
+    height: 900px;
+    padding: 150px 0px 100px;
+    border-top: 1px solid #ddd;
+  }
+  #meets .inner {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  #meets .inner h2 {
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #meets .inner h2 img {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  #meets .inner .artist_logo {
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #meets .inner .artist_logo img {
+    width: 150px;
+    margin-bottom: 2%;
+  }
+  #meets .inner li {
+    width: 50%;
+    margin: 0 auto;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #meets .inner li .img img {
+    width: 100%;
+    box-shadow: 14px -7px 50px -5px rgba(0, 0, 0, 0.5);
+  }
+  #meets .inner li .txt .kor_name {
+    font-size: 28px;
+    margin: 5% 0% 2%;
+    color: #4477be;
+  }
+  #meets .inner li .txt .eng_name {
+    font-size: 16px;
+    margin: 2% 0% 5%;
+    color: #79a3dc;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+  }
+  #meets .inner li .txt .kor_txt {
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.75;
+  }
+  #meets .inner li .txt .eng_txt {
+    color: #666;
+    margin-top: 14px;
+    line-height: 1.75;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+  }
+  .interview_logo {
+    width: 1200px;
+    height: 79px;
+    margin: 0 auto;
+    background-image: url(../img/sub/interview.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview {
+    width: 100%;
+    height: 650px;
+    background-color: #f6f6f8;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview .inner {
+    width: 1200px;
+    height: 650px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #interview .inner .interview_img {
+    width: 55%;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview .inner .interview_img img {
+    width: 100%;
+  }
+  #interview .inner ul {
+    width: 40%;
+  }
+  #interview .inner ul li {
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #interview .inner ul li h3 {
+    color: #333;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  #interview .inner ul li p {
+    margin: 3% 0% 6% 0%;
+    color: #747474;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  #collabo {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #collabo .collabo_logo {
+    width: 650px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 180px;
+  }
+  #collabo .collabo_logo h2 {
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_logo h2 img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #collabo .collabo_logo h3 {
+    width: 60px;
+    height: 3px;
+    margin: 30px auto 0;
+    background-color: #a3a3a3;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_logo p {
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.8;
+    color: #666;
+    margin-top: 20px;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_video {
+    width: 1200px;
+    height: 270px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 140px;
+  }
+  #collabo .collabo_video img {
+    box-shadow: 5px -7px 20px -5px rgba(10, 10, 10, 0.3);
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_video h4 {
+    font-size: 24px;
+    color: #666;
+    text-align: center;
+    margin-top: 15px;
+    transform: translateY(100px);
+    transition: all 0.75s;
+    opacity: 0;
+  }
+  #collabo .collabo_video iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  #collabo .close {
+    font-size: 50px;
+    position: fixed;
+    top: 55px;
+    right: 27.5px;
+    cursor: pointer;
+    display: none;
+  }
+  #collabo .close i {
+    color: #fff;
+  }
 }
