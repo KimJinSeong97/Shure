@@ -798,6 +798,7 @@ header nav .nav_bot_bar {
     width: 100vw;
     height: 45%;
     padding-top: 40px;
+    overflow-x: hidden;
   }
   #meets_intro .swiper-container .swiper-slide {
     border-radius: 30px;
@@ -825,9 +826,13 @@ header nav .nav_bot_bar {
     margin-left: 10vw;
   }
   #meets_intro .swiper-container .swiper-button-next,
-#meets_intro .swiper-container .swiper-button-prev,
-#meets_intro .swiper-container .swiper-pagination {
+#meets_intro .swiper-container .swiper-button-prev {
     color: #fff;
+    margin-top: 50px;
+  }
+  #meets_intro .swiper-container .swiper-pagination {
+    color: #fff;
+    bottom: -50px;
   }
   #meets_intro .swiper-container .slide2 video,
 #meets_intro .swiper-container .slide3 video,
