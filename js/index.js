@@ -1,4 +1,3 @@
-// 모든 사이즈 공용 스크립트
 // 배너 슬라이드
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
@@ -12,6 +11,8 @@ prev.onclick = function () {
         return;
     }
     sbox.style.marginLeft = -100 * page + 'vw';
+    $('.dot').removeClass('dot_color');
+    $('.dot').eq(page).addClass('dot_color');
 };
 
 next.onclick = function () {
@@ -21,6 +22,8 @@ next.onclick = function () {
         return;
     }
     sbox.style.marginLeft = -100 * page + 'vw';
+    $('.dot').removeClass('dot_color');
+    $('.dot').eq(page).addClass('dot_color');
 };
 
 $(function () {
@@ -29,8 +32,10 @@ $(function () {
         index = $(this).index();
         page = index;
         $(sbox).stop().css({ marginLeft: -100 * index + "vw" });
+        $('.dot').removeClass('dot_color');
+        $(this).addClass('dot_color');
     })
-})
+});
 
 // 사이즈 별 스크립트
 if (window.matchMedia('(min-width: 1200px)').matches) {
